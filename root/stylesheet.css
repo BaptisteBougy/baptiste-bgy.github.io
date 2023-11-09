@@ -1,0 +1,28 @@
+body{background-color: #151827;
+  margin: 0;
+  font-family: 'Arial', sans-serif;}
+
+.top-bar {
+  background-color: #2B3051;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #37A9BE;
+}
