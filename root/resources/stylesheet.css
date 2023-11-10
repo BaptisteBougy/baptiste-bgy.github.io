@@ -3,6 +3,10 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+h1 {
+  color: #37A9BE;
+}
+
 .page {
   background-color: #151827;
   color: #DEE0EA;
