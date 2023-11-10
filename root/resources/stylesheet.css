@@ -29,17 +29,7 @@ body {
   color: #2B3051;
 }
 
-.discord-button {
-  width: 15px;
-  height: 15px;
-}
-
-.social-buttons {
-  max-width: 5%;
-  height: auto;
-}
-
-.markdown-body img {
+.social-button img {
   max-width: 5%;
   box-sizing: content-box;
   background-color: #fff;
