@@ -33,7 +33,7 @@ body {
   color: #2B3051;
 }
 
-.social-zone {
+/*.social-zone {
   background:#353F77;
   position: relative;
 }
@@ -42,7 +42,7 @@ body {
   position: absolute;
   right: 24px;
   top: 24px;
-}
+}*/
 
 .social-button .discord-button {
   transition: color .25s,background .25s;
