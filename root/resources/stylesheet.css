@@ -13,17 +13,17 @@ h2 {
 }
 
 table {
-  background-color: #151827;
+  background: #2B3051;
   width: 100%;
 }
 
 tr {
-  background-color: #151827;
+  background: #2B3051;
 }
 
 td {
   border-width:0px;
-  background-color: #151827;
+  background: #2B3051;
   width: 33%;
 }
 
