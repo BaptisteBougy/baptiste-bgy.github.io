@@ -8,7 +8,8 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-p {
+.page {
+  background-color: #151827;
   color: #DEE0EA;
 }
 
