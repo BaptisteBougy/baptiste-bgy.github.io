@@ -62,3 +62,12 @@ body {
   padding: 0px 32px 16px 0px;
   position: sticky;
 }
+
+.boxes {
+    display: grid;
+    gap: clamp(1rem, -10.0769rem + 17.3077vw, 5.5rem);
+    grid-template-columns: 192px minmax(0px, 1fr) 192px;
+    margin: 0px auto;
+    max-width: 1360px;
+    padding: 0px 24px;
+}
