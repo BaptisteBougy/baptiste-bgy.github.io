@@ -12,14 +12,7 @@ h2 {
   color: #37A9BE;
 }
 
-.markdown-body table {
-  width: 100%;
-  border-collapse:collapse;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-table {
+.social-zone table {
   width: 100%;
   border-collapse:collapse;
   margin-top: 0px;
