@@ -30,7 +30,6 @@ body {
 }
 
 .social-button img {
-  max-width: 5%;
-  box-sizing: content-box;
-  background-color: #fff;
+  width: 20px;
+  height: auto;
 }
