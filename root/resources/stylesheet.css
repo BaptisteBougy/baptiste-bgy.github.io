@@ -33,7 +33,11 @@ body {
   color: #2B3051;
 }
 
-.social-zone button{
+.social-zone {
+  position: relative;
+}
+
+.social-button {
   background:#353F77;
   border-radius: 10px;
   transition: color .25s,background .25s;
@@ -41,4 +45,15 @@ body {
   border: 0.2px solid #353F77;
   border-radius: 5px;
   padding: 3px;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.social-button .discord-button {
+  background:#353F77;
+  border-radius: 16px;
+  padding: 6px 8px;
+  transition: color .25s,background .25s;
+  cursor: pointer
 }
