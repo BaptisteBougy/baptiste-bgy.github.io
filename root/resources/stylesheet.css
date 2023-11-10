@@ -45,9 +45,6 @@ body {
 }
 
 .social-button .discord-button {
-  background:#353F77;
-  border-radius: 16px;
-  padding: 6px 8px;
   transition: color .25s,background .25s;
   cursor: pointer
 }
