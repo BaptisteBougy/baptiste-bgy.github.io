@@ -38,3 +38,9 @@ body {
   max-width: 5%;
   height: auto;
 }
+
+.markdown-body img {
+  max-width: 5%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
