@@ -49,6 +49,10 @@ p {
 }
 
 .social-button .discord-button {
-  transition: color .25s,background .25s;
+  transition: opacity 0.3s ease;
   cursor: pointer
+}
+
+.social-button .discord-button:hover {
+  opacity: 0.5;
 }
