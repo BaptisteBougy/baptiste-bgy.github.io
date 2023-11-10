@@ -67,8 +67,8 @@ td {
   border-radius: 16px;
 }
 
-.social-zone code {
-  font-size: 80%
+.social-zone pre > code {
+  font-size: 80%;
 }
 
 .social-button {
