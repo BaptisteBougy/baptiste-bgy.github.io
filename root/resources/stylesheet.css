@@ -28,3 +28,8 @@ body {
 .menu a:hover {
   color: #2B3051;
 }
+
+.discord-button {
+  width: 15px;
+  height: 15px;
+}
