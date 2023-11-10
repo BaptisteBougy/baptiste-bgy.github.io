@@ -1,9 +1,4 @@
-html {
-  /*background-color: #151827;*/
-}
-
 body {
-  /*background-color: #151827;*/
   margin: 0;
   font-family: 'Arial', sans-serif;
 }
@@ -14,7 +9,6 @@ body {
 }
 
 .top-bar {
-  /*background-color: #151827;*/
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -39,7 +33,6 @@ body {
 }
 
 .social-zone {
-  /*background:#353F77;*/
   position: relative;
 }
 
