@@ -74,6 +74,10 @@ td {
   border-radius: 16px;
 }
 
+.social-zone code {
+  font-size: 80%
+}
+
 .social-button {
   transition: opacity 0.3s ease;
   cursor: pointer
