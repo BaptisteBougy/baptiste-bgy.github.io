@@ -74,7 +74,7 @@ td {
 .social-button {
   width: auto;
   transition: opacity 0.3s ease;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .social-button:hover {
