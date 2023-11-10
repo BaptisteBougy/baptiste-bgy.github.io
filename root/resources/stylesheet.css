@@ -8,6 +8,10 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+p {
+  color: #DEE0EA;
+}
+
 .top-bar {
   background-color: #151827;
   padding: 10px 20px;
