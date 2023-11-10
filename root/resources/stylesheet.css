@@ -32,3 +32,10 @@ body {
 .menu a:hover {
   color: #2B3051;
 }
+
+.social-zone button{
+  background:#353F77;
+  border-radius: 10px;
+  transition: color .25s,background .25s;
+  cursor: pointer
+}
