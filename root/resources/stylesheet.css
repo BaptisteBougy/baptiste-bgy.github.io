@@ -43,11 +43,11 @@ body {
   border-radius: 16px;
 }
 
-.social-button {
+/*.social-button {
   position: absolute;
   right: 24px;
   top: 24px;
-}
+}*/
 
 .social-button .discord-button {
   transition: opacity 0.3s ease;
