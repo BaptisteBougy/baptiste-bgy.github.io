@@ -1,6 +1,3 @@
-/*html {
-  background-color: #151827;
-}*/
 html,
 body {
   margin: 0;
@@ -20,14 +17,6 @@ table,
   margin-top: 0px;
   margin-bottom: 0px;
 }
-
-/*.social-zone table {
-  display: inline;
-  width: 100%;
-  border-collapse:collapse;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}*/
 
 td {
   border: 0px;
