@@ -1,0 +1,43 @@
+---
+layout: page
+---
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Baptiste BOUGY</title>
+        <link rel="stylesheet" href="resources/stylesheet.css">
+    </head>
+    <body>
+        <div class="page">
+            <div class="top-bar">
+                <div class="logo">Baptiste BOUGY</div>
+                <div class="menu">
+                  <a href="https://baptistebougy.github.io">Accueil</a>
+                  <a href="#">CV</a>
+                  <a href="/projets">Projets</a>
+                  <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="main">
+                <p>
+                    Bienvenue sur mon site personnel. Retrouvez ici une présentation de moi, mon CV ainsi que les différents projets que j'ai pu réalisés.
+                </p>
+                # baptistebougy.github.io
+            </div>
+            <div class="social-zone">
+                <h2 id="table-of-contents" class="toc-title">
+                    Mes Réseaux
+                </h2>
+                <pre>
+                    <code>
+                        <div>
+                            <a class="social-button" href="https://www.discord.com" target="_blank"><img src="\root\resources\png-transparent-discord-computer-servers-teamspeak-discord-icon-video-game-smiley-online-chat-thumbnail.png" style="width: 50px;height: auto; background-color: transparent;"></a><a class="social-button" href="https://www.linkedin.com" target="_blank"><img src="\root\resources\logo-linkedin.png" style="width: 50px;height: auto; background-color: transparent;"></a><a class="social-button" href="https://github.com/BaptisteBougy" target="_blank"><img src="\root\resources\25231.png" style="width: 50px;height: auto; background-color: transparent;"></a>
+                        </div>
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </body>
+</html>
