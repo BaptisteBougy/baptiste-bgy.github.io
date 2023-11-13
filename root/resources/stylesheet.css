@@ -1,7 +1,7 @@
-html {
+/*html {
   background-color: #151827;
-}
-
+}*/
+html,
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -12,14 +12,7 @@ h2 {
   color: #37A9BE;
 }
 
-table {
-  display: inline;
-  width: 100%;
-  border-collapse:collapse;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
+table,
 .social-zone table {
   display: inline;
   width: 100%;
@@ -27,6 +20,14 @@ table {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+/*.social-zone table {
+  display: inline;
+  width: 100%;
+  border-collapse:collapse;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}*/
 
 td {
   border: 0px;
