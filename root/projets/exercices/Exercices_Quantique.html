@@ -34,17 +34,21 @@ permalink: /projets/exercices/exercices-quantique
             <div class="math-zone">
                 <h5 style="color: #37A9BE;">Exercice 18 : Projecteur</h5>
                         <p>
-                            1. Écrire les projecteurs $\hat{P}_0$ et $\hat{P}_1$ qui projettent respectivement sur les états $\ket{0}$ et $\ket{1}$ dans la base canonique. On vérifiera la complétude de $\hat{P}_0$ et $\hat{P}_1$.
+                            1. Écrire les projecteurs $\hat{P}_0$ et $\hat{P}_1$ qui projettent respectivement sur les états $|0\langle$ et $|1\langle$ dans la base canonique. On vérifiera la complétude de $\hat{P}_0$ et $\hat{P}_1$.
                             
                             - Rappels :
-                            $\ket{0}=\begin{bmatrix} 1\\0\end{bmatrix}$ et $\ket{1}=\begin{bmatrix} 0\\1\end{bmatrix}$
+                            $|0\langle=\begin{bmatrix} 1\\0\end{bmatrix}$ et $|1\langle=\begin{bmatrix} 0\\1\end{bmatrix}$
                             - Respectivement :
-                            $\bra{0}=\begin{bmatrix} 1 & 0\end{bmatrix}$ et $\bra{1}=\begin{bmatrix} 0&1\end{bmatrix}$
+                            $
+angle0|=\begin{bmatrix} 1 & 0\end{bmatrix}$ et $
+angle1|=\begin{bmatrix} 0&1\end{bmatrix}$
                             
                             ---
-                            - Écrire les projecteurs $\hat{P}_0$ et $\hat{P}_1$ qui projettent respectivement sur les états $\ket{0}$ et $\ket{1}$ dans la base canonique :
-                            $$\hat{P}_0=\ket{0}\bra{0}=\begin{bmatrix} 1\\0\end{bmatrix}\begin{bmatrix} 1 & 0\end{bmatrix}=\begin{bmatrix} 1\times1 & 1\times0\\0\times1 & 0\times0\end{bmatrix}=\begin{bmatrix} 1 & 0\\0 & 0\end{bmatrix}$$
-                            $$\hat{P}_1=\ket{1}\bra{1}=\begin{bmatrix} 0\\1\end{bmatrix}\begin{bmatrix} 0 & 1\end{bmatrix}=\begin{bmatrix} 0 & 0\\0 & 1\end{bmatrix}$$
+                            - Écrire les projecteurs $\hat{P}_0$ et $\hat{P}_1$ qui projettent respectivement sur les états $|0\langle$ et $|1\langle$ dans la base canonique :
+                            $$\hat{P}_0=|0\langle
+angle0|=\begin{bmatrix} 1\\0\end{bmatrix}\begin{bmatrix} 1 & 0\end{bmatrix}=\begin{bmatrix} 1\times1 & 1\times0\\0\times1 & 0\times0\end{bmatrix}=\begin{bmatrix} 1 & 0\\0 & 0\end{bmatrix}$$
+                            $$\hat{P}_1=|1\langle
+angle1|=\begin{bmatrix} 0\\1\end{bmatrix}\begin{bmatrix} 0 & 1\end{bmatrix}=\begin{bmatrix} 0 & 0\\0 & 1\end{bmatrix}$$
                             
                             - On vérifiera la complétude de $\hat{P}_0$ et $\hat{P}_1$ :
                             $$\hat{P}_0+\hat{P}_1=\begin{bmatrix} 1 & 0\\0 & 0\end{bmatrix}+\begin{bmatrix} 0 & 0\\0 & 1\end{bmatrix}=\begin{bmatrix} 1 & 0\\0 & 1\end{bmatrix}=\hat{I}$$
@@ -52,32 +56,47 @@ permalink: /projets/exercices/exercices-quantique
                             
                             ---
                             
-                            2. En utilisant $\hat{P}_0$ et $\hat{P}_1$, déterminer les probabilités de trouver $\ket{0}$ et de trouver $\ket{1}$ lorsqu'une mesure de l'état $\ket{\psi} = \frac{1}{\sqrt[2]{3}}\ket{0} + \sqrt[2]{\frac{2}{3}}\ket{1}$ est effectuée.
+                            2. En utilisant $\hat{P}_0$ et $\hat{P}_1$, déterminer les probabilités de trouver $|0\langle$ et de trouver $|1\langle$ lorsqu'une mesure de l'état $\ket{\psi} = \frac{1}{\sqrt[2]{3}}|0\langle + \sqrt[2]{\frac{2}{3}}|1\langle$ est effectuée.
                             Rappels :
-                            $\braket{0|0} = 1$ et $\braket{1|1}=1$
-                            $\braket{0|1} = 0$ et $\braket{1|0}=0$
+                            $\rangle0|0\langle = 1$ et $\rangle1|1\langle=1$
+                            $\rangle0|1\langle = 0$ et $\rangle1|0\langle=0$
                             
                             ---
                             
-                            - En utilisant $\hat{P}_0$ et $\hat{P}_1$, déterminer les probabilités de trouver $\ket{0}$ et de trouver $\ket{1}$ lorsqu'une mesure de l'état $\ket{\psi} = \frac{1}{\sqrt[2]{3}}\ket{0} + \sqrt[2]{\frac{2}{3}}\ket{1}$ est effectuée.
-                            $$\hat{P}_0\psi=\ket{0}\bra{0}\left\lparen\frac{1}{\sqrt[2]{3}}\ket{0}+\sqrt[2]{\frac{2}{3}}\ket{1}\right\rparen=\hat{P}_0\psi=\frac{1}{\sqrt[2]{3}}\ket{0}\braket{0|0}+\sqrt[2]{\frac{2}{3}}\ket{0}\braket{1|0}$$
-                            $$P_0[0]=\braket{\psi|\hat{P}_0|\psi}=\left\lparen\frac{1}{\sqrt[2]{3}}\bra{0}+\sqrt[2]{\frac{2}{3}}\bra{1}\right\rparen\frac{1}{\sqrt[2]{3}}\ket{0}=\braket{\psi|\hat{P}_0|\psi}=\frac{1}{\sqrt[2]{3}}\frac{1}{\sqrt[2]{3}}\braket{0|0}+\sqrt[2]{\frac{2}{3}}\frac{1}{\sqrt[2]{3}}\braket{1|0}=\frac{1}{3}$$
-                            $$\braket{\psi|\hat{P}_0|\psi}\Longleftrightarrow P_0[0]=| \braket{0|\psi}|²$$
+                            - En utilisant $\hat{P}_0$ et $\hat{P}_1$, déterminer les probabilités de trouver $|0\langle$ et de trouver $|1\langle$ lorsqu'une mesure de l'état $\ket{\psi} = \frac{1}{\sqrt[2]{3}}|0\langle + \sqrt[2]{\frac{2}{3}}|1\langle$ est effectuée.
+                            $$\hat{P}_0\psi=|0\langle
+angle0|\left\lparen\frac{1}{\sqrt[2]{3}}|0\langle+\sqrt[2]{\frac{2}{3}}|1\langle\right\rparen=\hat{P}_0\psi=\frac{1}{\sqrt[2]{3}}|0\langle\rangle0|0\langle+\sqrt[2]{\frac{2}{3}}|0\langle\rangle1|0\langle$$
+                            $$P_0[0]=\rangle\psi|\hat{P}_0|\psi\langle=\left\lparen\frac{1}{\sqrt[2]{3}}
+angle0|+\sqrt[2]{\frac{2}{3}}
+angle1|\right\rparen\frac{1}{\sqrt[2]{3}}|0\langle=\rangle\psi|\hat{P}_0|\psi\langle=\frac{1}{\sqrt[2]{3}}\frac{1}{\sqrt[2]{3}}\rangle0|0\langle+\sqrt[2]{\frac{2}{3}}\frac{1}{\sqrt[2]{3}}\rangle1|0\langle=\frac{1}{3}$$
+                            $$\rangle\psi|\hat{P}_0|\psi\langle\Longleftrightarrow P_0[0]=| \rangle0|\psi\langle|²$$
                             On peut également faire ainsi :
-                            $$P_1[1]=\braket{\psi|\hat{P}_1|\psi}=|\sqrt[2]{\frac{2}{3}}|²=\frac{2}{3}$$
+                            $$P_1[1]=\rangle\psi|\hat{P}_1|\psi\langle=|\sqrt[2]{\frac{2}{3}}|²=\frac{2}{3}$$
                             
                             ---
                             
                             3. Écrire les projecteurs $\hat{P}_+$ et $\hat{P}_-$ qui projettent respectivement sur les états $\ket{+}$ et $\ket{-}$ dans la base canonique.
-                            	On vérifiera la complétude de $\hat{P}_+$ et $\hat{P}_-$ où l'on rappelle que $\ket{+} = \frac{1}{\sqrt[2]{2}}(\ket{0}+\ket{1})$ et $\ket{-} = \frac{1}{\sqrt[2]{2}}(\ket{0}-\ket{1})$.
+                            	On vérifiera la complétude de $\hat{P}_+$ et $\hat{P}_-$ où l'on rappelle que $\ket{+} = \frac{1}{\sqrt[2]{2}}(|0\langle+|1\langle)$ et $\ket{-} = \frac{1}{\sqrt[2]{2}}(|0\langle-|1\langle)$.
                             	Rappels :
                             	$\bra{+}=\ket{+}^\dagger$
                             ---
                             - Écrire les projecteurs $\hat{P}_+$ et $\hat{P}_-$ qui projettent respectivement sur les états $\ket{+}$ et $\ket{-}$ dans la base canonique :
-                            $$\hat{P}_+=\left\lparen{\frac{\ket{0}+\ket{1}}{\sqrt[2]{2}}}\right\rparen\left\lparen{\frac{\bra{0}+\bra{1}}{\sqrt[2]{2}}}\right\rparen=\frac{1}{2}(\ket{0}\bra{0}+\ket{0}\bra{1}+\ket{1}\bra{0}+\ket{1}\bra{1})=\frac{1}{2}\begin{bmatrix} 1 & 1\\1 & 1\end{bmatrix}$$
-                            $$\hat{P}_-=\left\lparen{\frac{\ket{0}-\ket{1}}{\sqrt[2]{2}}}\right\rparen\left\lparen{\frac{\bra{0}-\bra{1}}{\sqrt[2]{2}}}\right\rparen=\frac{1}{2}(\ket{0}\bra{0}-\ket{0}\bra{1}-\ket{1}\bra{0}+\ket{1}\bra{1})=\frac{1}{2}\begin{bmatrix} 1 & -1\\-1 & 1\end{bmatrix}$$
+                            $$\hat{P}_+=\left\lparen{\frac{|0\langle+|1\langle}{\sqrt[2]{2}}}\right\rparen\left\lparen{\frac{
+angle0|+
+angle1|}{\sqrt[2]{2}}}\right\rparen=\frac{1}{2}(|0\langle
+angle0|+|0\langle
+angle1|+|1\langle
+angle0|+|1\langle
+angle1|)=\frac{1}{2}\begin{bmatrix} 1 & 1\\1 & 1\end{bmatrix}$$
+                            $$\hat{P}_-=\left\lparen{\frac{|0\langle-|1\langle}{\sqrt[2]{2}}}\right\rparen\left\lparen{\frac{
+angle0|-
+angle1|}{\sqrt[2]{2}}}\right\rparen=\frac{1}{2}(|0\langle
+angle0|-|0\langle
+angle1|-|1\langle
+angle0|+|1\langle
+angle1|)=\frac{1}{2}\begin{bmatrix} 1 & -1\\-1 & 1\end{bmatrix}$$
                             ---
-                            - On vérifiera la complétude de $\hat{P}_+$ et $\hat{P}_-$ où l'on rappelle que $\ket{+} = \frac{1}{\sqrt[2]{2}}(\ket{0}+\ket{1})$ et $\ket{-} = \frac{1}{\sqrt[2]{2}}(\ket{0}-\ket{1})$.
+                            - On vérifiera la complétude de $\hat{P}_+$ et $\hat{P}_-$ où l'on rappelle que $\ket{+} = \frac{1}{\sqrt[2]{2}}(|0\langle+|1\langle)$ et $\ket{-} = \frac{1}{\sqrt[2]{2}}(|0\langle-|1\langle)$.
                             $$\hat{P}_++\hat{P}_-=\frac{1}{2}\begin{bmatrix} 1 & 1\\1 & 1\end{bmatrix}+\frac{1}{2}\begin{bmatrix} 1 & -1\\-1 & 1\end{bmatrix}=\frac{1}{2}\begin{bmatrix} 2 & 0\\0 & 2\end{bmatrix}=\begin{bmatrix} 1 & 0\\0 & 1\end{bmatrix}=\hat{I}$$
                             {$\hat{P}_+,\hat{P}_-$} est bien un ensemble complet de projecteur car $\hat{P}_++\hat{P}_-$ est bien égal à $\hat{I}$.
                         </p>
