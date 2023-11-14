@@ -81,3 +81,7 @@ td {
 .social-button:hover {
   opacity: 0.5;
 }
+
+.math-zone hr {
+  border-top: 1px;
+}
