@@ -56,6 +56,13 @@ td {
   color: #2B3051;
 }
 
+.block {
+    background-color: #2B3051; /* Couleur de fond */
+    border-radius: 10px; /* Rayon des coins */
+    padding: 20px; /* Optionnel : Ajoute un espace intérieur */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .social-zone {
   position: relative;
 }
