@@ -57,9 +57,9 @@ td {
 }
 
 .block {
-    background-color: #2B3051; /* Couleur de fond */
-    border-radius: 10px; /* Rayon des coins */
-    padding: 20px; /* Optionnel : Ajoute un espace intérieur */
+    background-color: #2B3051;
+    border-radius: 10px;
+    padding: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
