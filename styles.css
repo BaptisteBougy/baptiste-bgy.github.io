@@ -1,0 +1,150 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0 20px;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+/* Styles pour la navigation */
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-left: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #333;
+    transition: all 0.5s ease-out;
+    transform: translateX(-50%);
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    margin-left: calc(33% - 1px);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background-color: #ddd;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+
+.timeline-date {
+    width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 0;
+    left: -320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.date-header {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.date-body {
+    padding: 10px;
+    color: black;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.timeline-content {
+    flex-grow: 1;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-header {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+}
+
+.timeline-body {
+    padding: 10px;
+    color: black;
+    flex-grow: 1;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 24px;
+    width: 12px;
+    height: 12px;
+    background-color: #3498db;
+    border-radius: 50%;
+    z-index: 1;
+}
