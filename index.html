@@ -2,42 +2,70 @@
 layout: page
 ---
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Baptiste BOUGY</title>
-        <link rel="stylesheet" href="root/resources/stylesheet.css">
-    </head>
-    <body>
-        <div class="page">
-            <div class="top-bar">
-                <div class="logo">Baptiste BOUGY</div>
-                <div class="menu">
-                  <a href="https://baptistebougy.github.io">Accueil</a>
-                  <a href="/cv">CV</a>
-                  <a href="/projets">Projets</a>
-                  <a href="#">Contact</a>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Mon Site Internet</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="name">BOUGY Baptiste</div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#experiences">Expériences et formation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1 id="projets">Projets</h1>
+    <section id="experiences">
+        <h1>Expériences et formation</h1>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="date-header">Octobre 2022 - Août2024</div>
+                    <div class="date-body">Centre Social et Interculturel ALCO</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">Alternance au Centre Social et Interculturel ALCO</div>
+                    <div class="timeline-body">
+                        En tant que chargé de projets et développeur en Intelligence Artificielle, il m'a été confié la tâche de développer un outil
+                        étant capable de réaliser automatiquement l'émargement du Centre à l'aide de la reconnaissance faciale.
+                    </div>
                 </div>
             </div>
-            <div class="main">
-                <p>
-                    Bienvenue sur mon site personnel. Retrouvez ici une présentation de moi, mon CV ainsi que les différents projets que j'ai pu réalisés.
-                </p>
-                # baptistebougy.github.io
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="date-header">Septembre 2022 - Août 2024</div>
+                    <div class="date-body">Université de Reims Champagne-Ardenne</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">Master en Intelligence Artificielle et Mathématiques Quantiques</div>
+                    <div class="timeline-body">
+                        L'objectif de ce Master est d'apprendre le fonctionnement des différents types d'Intelligences Artificielles et de pouvoir
+                        les programmer. 
+                    </div>
+                </div>
             </div>
-            <div class="social-zone">
-                <h2 id="table-of-contents" class="toc-title">
-                    Mes Réseaux
-                </h2>
-                <pre>
-                    <code>
-                        <div>
-                            <a class="social-button" href="https://www.discord.com" target="_blank"><img src="\root\resources\png-transparent-discord-computer-servers-teamspeak-discord-icon-video-game-smiley-online-chat-thumbnail.png" style="width: 50px;height: auto; background-color: transparent;"></a>            <a class="social-button" href="https://www.linkedin.com" target="_blank"><img src="\root\resources\logo-linkedin.png" style="width: 50px;height: auto; background-color: transparent;"></a>            <a class="social-button" href="https://github.com/BaptisteBougy" target="_blank"><img src="\root\resources\25231.png" style="width: 50px;height: auto; background-color: transparent;"></a>
-                        </div>
-                    </code>
-                </pre>
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="date-header">Septembre 2019 - Août 2022</div>
+                    <div class="date-body">Université de Reims Champagne-Ardenne</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">Licence en Informatique</div>
+                    <div class="timeline-body">
+                        L'objectif de cette Licence est d'apprendre les fondements de la programmation informatique et du fonctionnement des machines.
+                        Deux spécialités ont été choisies en troisième année de Licence qui sont l'Intelligence Artificielle et l'imagerie numérique.
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
+    </section>
+</body>
 </html>
