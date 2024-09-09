@@ -1,7 +1,7 @@
 body {
     font-family: 'Nunito', sans-serif;
-    margin: 0 20px;
     padding: 0;
+    margin: 0 0;
 }
 
 header {
@@ -36,15 +36,15 @@ header {
     margin-left: 20px;
 }
 
-.navigation a {
+a {
     text-decoration: none;
-    color: #333;
     font-weight: 500;
     position: relative;
     display: inline-block;
+    color: #333;
 }
 
-.navigation a::after {
+a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -56,8 +56,62 @@ header {
     transform: translateX(-50%);
 }
 
-.navigation a:hover::after {
+a:hover::after {
     width: 100%;
+}
+
+.content {
+    margin: 0 20px;
+}
+
+/* Styles pour la section des projets */
+#projets, #experiences {
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h2 {
+    color: #3498db;
+    margin-top: 0;
+}
+
+.project-card p {
+    color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .project-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .project-card {
+        width: 100%;
+    }
 }
 
 .timeline {
@@ -84,13 +138,13 @@ header {
 }
 
 .timeline-date {
-    width: 300px;
+    width: 400px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 3px 5px rgba(0,0,0,0.1);
     position: absolute;
     top: 0;
-    left: -320px;
+    left: -420px;
     display: flex;
     flex-direction: column;
 }
