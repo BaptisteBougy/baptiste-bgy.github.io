@@ -75,7 +75,17 @@ a:hover::after {
     margin: 20px 20px;
 }
 
-#projets, #experiences {
+#presentation {
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.titre {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#presentation, #projets, #experiences {
     padding: 20px 0;
     max-width: 1200px;
     margin: 0 auto;
