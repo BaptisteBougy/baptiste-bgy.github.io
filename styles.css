@@ -31,6 +31,7 @@ header {
 }
 
 .name {
+    text-decoration: none;
     font-size: 24px;
     font-weight: bold;
     color: #3498db;
@@ -47,7 +48,7 @@ header {
     margin-left: 20px;
 }
 
-a {
+.redirection {
     text-decoration: none;
     font-weight: 500;
     position: relative;
@@ -55,7 +56,7 @@ a {
     color: #333;
 }
 
-a::after {
+.redirection::after {
     content: '';
     position: absolute;
     width: 0;
@@ -67,12 +68,12 @@ a::after {
     transform: translateX(-50%);
 }
 
-a:hover::after {
+.redirection:hover::after {
     width: 100%;
 }
 
 .content {
-    margin: 20px 20px;
+    margin: 40px 20px;
 }
 
 #presentation {
@@ -119,6 +120,19 @@ a:hover::after {
 
 .project-card p {
     color: #333;
+}
+
+.button {
+    text-decoration: none;
+    padding: 0 5px;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.button:hover {
+    background-color: #2174AD;
 }
 
 .timeline {
