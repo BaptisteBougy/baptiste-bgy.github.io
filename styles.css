@@ -173,6 +173,36 @@ header {
     margin-right: 10px;
 }
 
+.categorie-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transform: rotate(90deg);
+    transition: transform 0.5s ease;
+}
+
+.toggle-btn.active {
+    transform: rotate(-90deg);
+}
+
+.competences-list {
+    max-height: 1000px; /* Ajustez selon vos besoins */
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.competences-list.hidden {
+    max-height: 0;
+}
+
 .barre-progression {
     background-color: #e0e0e0;
     height: 20px;
