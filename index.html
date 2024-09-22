@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--<script src="scripts.js"></script>-->
     <title>CV BOUGY</title>
 </head>
 <body>
@@ -53,95 +55,110 @@
             <h1>Compétences</h1>
             <div class="competences-card">
                 <div class="competences-categorie">
-                    <h2>Programmation</h2>
-                    <div class="competence">
-                        <span class="competence-nom">Python</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 90%;"></div>
-                        </div>
+                    <div class="categorie-header">
+                        <h2>Programmation</h2>
+                        <button class="toggle-btn">&#9656;</button>
                     </div>
-                    <div class="competence">
-                        <span class="competence-nom">C</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 87%;"></div>
+                    <div class="competences-list">
+                        <div class="competence">
+                            <span class="competence-nom">Python</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 90%;"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="competence">
-                        <span class="competence-nom">SQL</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 82%;"></div>
+                        <div class="competence">
+                            <span class="competence-nom">C</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 87%;"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="competence">
-                        <span class="competence-nom">Java</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 78%;"></div>
+                        <div class="competence">
+                            <span class="competence-nom">SQL</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 82%;"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="competence">
-                        <span class="competence-nom">C#</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 71%;"></div>
+                        <div class="competence">
+                            <span class="competence-nom">Java</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 78%;"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="competence">
-                        <span class="competence-nom">R</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 65%;"></div>
+                        <div class="competence">
+                            <span class="competence-nom">C#</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 71%;"></div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="competences-categorie">
-                    <h2>Programmation WEB</h2>
-                    <div class="competence">
-                        <span class="competence-nom">PHP</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="competence">
-                        <span class="competence-nom">HTML</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="competence">
-                        <span class="competence-nom">CSS</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="competence">
-                        <span class="competence-nom">JavaScript</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 70%;"></div>
+                        <div class="competence">
+                            <span class="competence-nom">R</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 65%;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="competences-categorie">
-                    <h2>Langues</h2>
-                    <div class="competence">
-                        <span class="competence-nom">Français</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 98%;"></div>
+                    <div class="categorie-header">
+                        <h2>Programmation WEB</h2>
+                        <button class="toggle-btn">&#9656;</button>
+                    </div>
+                    <div class="competences-list">
+                        <div class="competence">
+                            <span class="competence-nom">PHP</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="competence">
+                            <span class="competence-nom">HTML</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="competence">
+                            <span class="competence-nom">CSS</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="competence">
+                            <span class="competence-nom">JavaScript</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 70%;"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="competence">
-                        <span class="competence-nom">Anglais</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 84%;"></div>
-                        </div>
+                </div>
+                <div class="competences-categorie">
+                    <div class="categorie-header">
+                        <h2>Langues</h2>
+                        <button class="toggle-btn">&#9656;</button>
                     </div>
-                    <div class="competence">
-                        <span class="competence-nom">Allemand</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 65%;"></div>
+                    <div class="competences-list">
+                        <div class="competence">
+                            <span class="competence-nom">Français</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 98%;"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="competence">
-                        <span class="competence-nom">Japonais</span>
-                        <div class="barre-progression">
-                            <div class="progression" style="width: 30%;"></div>
+                        <div class="competence">
+                            <span class="competence-nom">Anglais</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 84%;"></div>
+                            </div>
+                        </div>
+                        <div class="competence">
+                            <span class="competence-nom">Allemand</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                        <div class="competence">
+                            <span class="competence-nom">Japonais</span>
+                            <div class="barre-progression">
+                                <div class="progression" style="width: 30%;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -239,5 +256,14 @@
         <a href="https://github.com/BaptMania"><img src="github-icon-2.svg" alt="icon-github" width="25px" height="auto" /></a>
         <a href="https://www.linkedin.com/in/baptiste-bougy-49833b23b/"><img src="linkedin.webp" alt="icon-linkedin" width="26px" height="auto" /></a>
     </footer>
+    <script>
+        document.querySelectorAll('.toggle-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const competencesList = button.closest('.competences-categorie').querySelector('.competences-list');
+                button.classList.toggle('active');
+                competencesList.classList.toggle('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
