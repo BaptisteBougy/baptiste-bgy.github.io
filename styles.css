@@ -363,6 +363,10 @@ footer {
         width: 100%;
     }
 
+    #presentation p {
+        padding-right: 10px;
+    }
+
     .presentation-image img {
         width: 150px;
         height: 150px;
