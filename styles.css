@@ -347,7 +347,7 @@ footer {
 }
 
 @media (max-width: 900px) {
-        h1, .titre {
+    h1, .titre {
         font-size: 25px;
     }
     
@@ -361,6 +361,11 @@ footer {
 
     #presentation {
         width: 100%;
+    }
+
+    .presentation-image img {
+        width: 150px;
+        height: 150px;
     }
 
     .project-card {
