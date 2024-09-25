@@ -347,6 +347,18 @@ footer {
 }
 
 @media (max-width: 900px) {
+        h1, .titre {
+        font-size: 25px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    p, body {
+        font-size: 15px;
+    }
+
     #presentation {
         width: 100%;
     }
