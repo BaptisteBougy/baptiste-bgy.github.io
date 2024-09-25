@@ -372,6 +372,10 @@ footer {
         height: 150px;
     }
 
+    #projets h1, #competences h1, #experiences h1 {
+        margin: 0;
+    }
+
     .project-card {
         width: calc(50% - 20px);
     }
