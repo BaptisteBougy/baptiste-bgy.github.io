@@ -347,6 +347,10 @@ footer {
 }
 
 @media (max-width: 900px) {
+    #presentation {
+        width: 100%;
+    }
+
     .project-card {
         width: calc(50% - 20px);
     }
