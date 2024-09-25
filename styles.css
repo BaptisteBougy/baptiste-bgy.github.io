@@ -365,6 +365,7 @@ footer {
     }
 
     #presentation p {
+        width: 300px;
         padding-right: 10px;
     }
 
