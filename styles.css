@@ -11,6 +11,18 @@ main {
     flex: 1;
 }
 
+h1, .titre {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+p, body {
+    font-size: 20px;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -32,7 +44,7 @@ header {
 
 .name {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color: #3498db;
 }
@@ -72,17 +84,38 @@ header {
     width: 100%;
 }
 
-.content {
-    margin: 60px 20px;
+#presentation {
+    padding-top: 80px !important;
+    padding-bottom: 20px !important;
+    font-size: 20px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
 }
 
-#presentation {
-    padding-top: 10px;
-    font-size: 20px;
+#presentation p {
+    padding-right: 50px;
+}
+
+.presentation-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.presentation-image {
+    flex-shrink: 0;
+}
+
+.presentation-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #3498db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .titre {
-    font-size: 25px;
     font-weight: bold;
 }
 
@@ -92,9 +125,14 @@ header {
 }
 
 #presentation, #projets, #competences, #experiences {
-    padding: 20px 0;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
+    padding: 20px;
+    padding-bottom: 70px;
+}
+
+#projets {
+    background-color: #e6f3fb;
+    padding-bottom: 70px;
 }
 
 .projects-container {
@@ -140,22 +178,19 @@ header {
     background-color: #2174AD;
 }
 
-#competences {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 .competences-card {
     background-color: #f8f8f8;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .competences-categorie {
     margin-bottom: 30px;
+    width: calc(33.333% - 20px);
 }
 
 .competences-categorie h2 {
@@ -180,27 +215,10 @@ header {
     margin-bottom: 15px;
 }
 
-.toggle-btn {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    transform: rotate(90deg);
-    transition: transform 0.5s ease;
-}
-
-.toggle-btn.active {
-    transform: rotate(-90deg);
-}
-
 .competences-list {
-    max-height: 1000px; /* Ajustez selon vos besoins */
+    max-height: 1000px;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
-}
-
-.competences-list.hidden {
-    max-height: 0;
 }
 
 .barre-progression {
@@ -209,7 +227,7 @@ header {
     border-radius: 10px;
     overflow: hidden;
     display: inline-block;
-    width: calc(100% - 110px);
+    width: 100%;
 }
 
 .progression {
@@ -217,6 +235,11 @@ header {
     background: linear-gradient(to right, #3498db, #2ecc71);
     border-radius: 10px;
     transition: width 0.5s ease-in-out;
+}
+
+#experiences {
+    background-color: #e6f3fb;
+    padding-bottom: 70px;
 }
 
 .timeline {
