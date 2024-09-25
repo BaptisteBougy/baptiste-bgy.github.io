@@ -366,6 +366,14 @@ footer {
     .project-card {
         width: calc(50% - 20px);
     }
+
+    .competences-card {
+        width: 100px;
+    }
+
+    .competences-categorie {
+        width: 100%;
+    }
 }
 
 @media (max-width: 600px) {
