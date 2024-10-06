@@ -11,7 +11,7 @@ main {
     flex: 1;
 }
 
-h1, .titre {
+h1, .titre, .name {
     font-size: 30px;
 }
 
@@ -44,7 +44,6 @@ header {
 
 .name {
     text-decoration: none;
-    font-size: 30px;
     font-weight: bold;
     color: #3498db;
 }
@@ -84,6 +83,15 @@ header {
     width: 100%;
 }
 
+.content {
+    width: 100%;
+    margin: 80px auto;
+}
+
+.content p {
+    margin: 0 50px;
+}
+
 #presentation {
     padding-top: 80px !important;
     padding-bottom: 20px !important;
@@ -120,8 +128,7 @@ header {
 }
 
 .titre-projet {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 100px;
 }
 
 #presentation, #projets, #competences, #experiences {
@@ -183,6 +190,23 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
+}
+
+.competences-card h2 {
+    padding: 0;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.competence-skill {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -352,7 +376,7 @@ footer {
         width: 100%;
     }
 
-    h1, .titre {
+    h1, .titre, .name {
         font-size: 20px;
     }
     
@@ -381,7 +405,7 @@ footer {
     #projets h1, #competences h1, #experiences h1 {
         margin: 0;
     }
-
+    
     .project-card {
         width: calc(50% - 20px);
     }
