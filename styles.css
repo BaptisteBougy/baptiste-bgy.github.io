@@ -472,6 +472,14 @@ footer {
     .competences-categorie {
         width: 100%;
     }
+
+    figure img {
+        height: 16px;
+    }
+    
+    figcaption {
+        font-size: 8px;
+    }
 }
 
 @media (max-width: 600px) {
