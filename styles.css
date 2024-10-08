@@ -11,8 +11,8 @@ body, html {
     width: 100%;
 }
   
-  .sidebar {
-    width: 80px; /* Ajustez selon vos besoins */
+.sidebar {
+    width: 80px;
     position: fixed;
     top: 80px;
     left: 0;
@@ -21,38 +21,31 @@ body, html {
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
-    overflow-y: auto; /* Pour permettre le défilement si nécessaire */
-    z-index: 1000; /* Assure que la sidebar est au-dessus du contenu */
-  }
+    overflow-y: auto;
+    z-index: 1000;
+}
   
-  .sidebar-link {
-    margin-bottom: 15px; /* Espace entre les liens */
-  }
+.sidebar-link {
+    margin-bottom: 15px;
+}
   
-  .sidebar-link img {
-    width: 50px; /* Ajustez la taille des images selon vos besoins */
-    height: 50px;
-    border-radius: 50%; /* Pour des images rondes */
+.sidebar-link img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
     transition: transform 0.3s ease;
-  }
+}
   
-  .sidebar-link img:hover {
-    transform: scale(1.1); /* Effet de zoom au survol */
-  }
+.sidebar-link img:hover {
+    transform: scale(1.1);
+}
   
-  .content {
+.content {
     width: 100%;
     flex: 1;
-    /*margin-left: 80px; /* Doit correspondre à la largeur de la sidebar */
-    /*padding: 20px;*/
-    position: relative; /* Nécessaire pour le z-index */
-    z-index: 1; /* Assure que le contenu est sous la sidebar */
-  }
-
-/*.content {
-    width: 100%;
-    margin: 80px auto;
-}*/
+    position: relative;
+    z-index: 1;
+}
 
 .content p {
     margin: 0 50px;
@@ -170,7 +163,7 @@ header {
 
 .presentation-image img {
     width: 300px;
-    height: 300px;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #3498db;
@@ -425,9 +418,9 @@ footer {
     margin-top: 20px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 480px) {
     header {
-        max-width: 900px;
+        max-width: 480px;
         width: 100%;
     }
 
@@ -443,8 +436,20 @@ footer {
         font-size: 10px;
     }
 
+    .sidebar {
+        width: 30px;
+    }
+
+    .sidebar-link img {
+        width: 25px;
+    }
+
+    #presentation, #projets, #competences, #experiences {
+        padding-left: 35px;
+    }
+
     #presentation {
-        width: 100%;
+        width: 350px;
     }
 
     #presentation p {
@@ -453,8 +458,7 @@ footer {
     }
 
     .presentation-image img {
-        width: 150px;
-        height: 150px;
+        width: 75px;
     }
 
     #projets h1, #competences h1, #experiences h1 {
