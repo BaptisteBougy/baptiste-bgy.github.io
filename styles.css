@@ -1,11 +1,63 @@
-body {
+body, html {
     font-family: 'Nunito', sans-serif;
+    margin: 0;
     padding: 0;
-    margin: 0 0;
+    height: 100%;
+  }
+  
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+  
+  .sidebar {
+    width: 80px; /* Ajustez selon vos besoins */
+    position: fixed;
+    top: 80px;
+    left: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+    padding: 20px 0;
+    overflow-y: auto; /* Pour permettre le défilement si nécessaire */
+    z-index: 1000; /* Assure que la sidebar est au-dessus du contenu */
+  }
+  
+  .sidebar-link {
+    margin-bottom: 15px; /* Espace entre les liens */
+  }
+  
+  .sidebar-link img {
+    width: 50px; /* Ajustez la taille des images selon vos besoins */
+    height: 50px;
+    border-radius: 50%; /* Pour des images rondes */
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar-link img:hover {
+    transform: scale(1.1); /* Effet de zoom au survol */
+  }
+  
+  .content {
+    width: 100%;
+    flex: 1;
+    /*margin-left: 80px; /* Doit correspondre à la largeur de la sidebar */
+    /*padding: 20px;*/
+    position: relative; /* Nécessaire pour le z-index */
+    z-index: 1; /* Assure que le contenu est sous la sidebar */
+  }
+
+/*.content {
+    width: 100%;
+    margin: 80px auto;
+}*/
+
+.content p {
+    margin: 0 50px;
 }
+
 
 main {
     flex: 1;
@@ -94,16 +146,6 @@ header {
 .navigation li .redirection:hover::after {
     width: 100%;
 }
-
-.content {
-    width: 100%;
-    margin: 80px auto;
-}
-
-.content p {
-    margin: 0 50px;
-}
-
 #presentation {
     padding-top: 80px !important;
     padding-bottom: 20px !important;
@@ -146,6 +188,7 @@ header {
 #presentation, #projets, #competences, #experiences {
     margin: 20px auto;
     padding: 20px;
+    padding-left: 80px;
     padding-bottom: 70px;
 }
 
