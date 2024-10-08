@@ -260,55 +260,6 @@ figcaption {
     justify-content: space-between;
 }
 
-.competences-categorie {
-    margin-bottom: 30px;
-    width: calc(33.333% - 20px);
-}
-
-.competences-categorie h2 {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.competence {
-    margin-bottom: 15px;
-}
-
-.competence-nom {
-    display: inline-block;
-    width: 100px;
-    margin-right: 10px;
-}
-
-.categorie-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.competences-list {
-    max-height: 1000px;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-}
-
-.barre-progression {
-    background-color: #e0e0e0;
-    height: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    display: inline-block;
-    width: 100%;
-}
-
-.progression {
-    height: 100%;
-    background: linear-gradient(to right, #3498db, #2ecc71);
-    border-radius: 10px;
-    transition: width 0.5s ease-in-out;
-}
-
 #experiences {
     background-color: #e6f3fb;
     padding-bottom: 70px;
@@ -338,13 +289,13 @@ figcaption {
 }
 
 .timeline-date {
-    width: 400px;
+    width: 30%;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 3px 5px rgba(0,0,0,0.1);
     position: absolute;
     top: 0;
-    left: -420px;
+    left: -31.6%;
     display: flex;
     flex-direction: column;
 }
@@ -476,9 +427,21 @@ footer {
     figure img {
         height: 16px;
     }
-    
+
     figcaption {
         font-size: 8px;
+    }
+
+    .timeline-date {
+        width: 40%;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        position: absolute;
+        top: 0;
+        left: -48.3%;
+        display: flex;
+        flex-direction: column;
     }
 }
 
