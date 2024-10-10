@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-  }
+}
   
 .container {
     display: flex;
@@ -124,7 +124,7 @@ header {
     transform: translateX(-50%);
 }
 
-.navigation li .redirection::after {
+.navigation li .redirection::after, .time::after {
     content: '';
     position: absolute;
     width: 0;
@@ -136,9 +136,10 @@ header {
     transform: translateX(-50%);
 }
 
-.navigation li .redirection:hover::after {
+.navigation li .redirection:hover::after, .time:hover::after {
     width: 100%;
 }
+
 #presentation {
     padding-top: 80px !important;
     padding-bottom: 20px !important;
@@ -178,7 +179,7 @@ header {
     margin: 0 100px;
 }
 
-#presentation, #projets, #competences, #experiences {
+#presentation, #projets, #competences, #experiences, #contact {
     margin: 20px auto;
     padding: 20px;
     padding-left: 80px;
@@ -246,6 +247,11 @@ header {
 
 figure {
     text-align: center;
+}
+
+figure img {
+    height: 64px;
+    width: auto;
 }
 
 figcaption {
@@ -358,15 +364,57 @@ figcaption {
     background-color: #53D576;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
+#contact {
+    /*margin: 20px 0;
+    padding: 20px;*/
+    
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8; /* Couleur de fond du formulaire */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
-    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Bordure des champs */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #3498db; /* Bordure bleue au focus */
+}
+
+button {
+    padding: 10px;
+    background-color: #3498db; /* Couleur du bouton */
+    color: white; /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Couleur au survol */
 }
 
 @media (max-width: 480px) {
