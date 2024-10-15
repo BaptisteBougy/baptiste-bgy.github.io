@@ -364,6 +364,16 @@ figcaption {
     background-color: #53D576;
 }
 
+.exp {
+    text-decoration: underline;
+    text-decoration-color: #53D576;
+}
+
+.dip {
+    text-decoration: underline;
+    text-decoration-color: #3498db;
+}
+
 #contact {
     /*margin: 20px 0;
     padding: 20px;*/
