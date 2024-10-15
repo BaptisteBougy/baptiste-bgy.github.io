@@ -76,6 +76,25 @@
                         <a class="button" href="Construction/">En savoir plus</a>
                     </div>
                 </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                    const cards = document.querySelectorAll('.project-card');
+                    
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('show');
+                            }
+                        });
+                    }, {
+                        threshold: 0.1 // Déclenche quand 10% de l'élément est visible
+                    });
+
+                    cards.forEach(card => {
+                        observer.observe(card);
+                    });
+                });    
+                </script>
             </section>
             <section id="competences">
                 <h1>Compétences</h1>
@@ -270,6 +289,25 @@
                         </figure>
                     </div>
                 </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                    const figures = document.querySelectorAll('figure');
+                    
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('show');
+                            }
+                        });
+                    }, {
+                        threshold: 0.1 // Déclenche quand 10% de l'élément est visible
+                    });
+
+                    figures.forEach(figure => {
+                        observer.observe(figure);
+                    });
+                });
+                </script>
             </section>
             <section id="experiences">
                 <h1><span class="exp">Expériences</span> et <span class="dip">diplômes</span></h1>

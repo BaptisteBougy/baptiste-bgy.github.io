@@ -205,7 +205,9 @@ header {
     padding: 20px;
     width: calc(33.333% - 20px);
     box-sizing: border-box;
-    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .project-card:hover {
@@ -219,6 +221,11 @@ header {
 
 .project-card p {
     color: #333;
+}
+
+.project-card.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .button {
@@ -247,6 +254,14 @@ header {
 
 figure {
     text-align: center;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+figure.show {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 figure img {
