@@ -397,44 +397,45 @@
                 </div>
             </section>
             <section id="contact">
-                <h1>Contactez-moi</h1>
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nom ou entreprise :</label>
-                        <input type="text" id="name" name="name" required>
+                <h1>Mon contact</h1>
+                <div class="contact-form">
+                    <div class="contact-container">
+                        <img src="Resources/Images/mail.png" alt="Email" class="image-gauche" data-copy="bougybaptiste@gmail.com">
+                        <div class="texte-droite" data-copy="bougybaptiste@gmail.com">
+                            <p>bougybaptiste@gmail.com</p>
+                        </div>
+                        <div class="tooltip">Mail copié dans le presse-papier !</div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email :</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="contact-container">
+                        <img src="Resources/Images/phone.png" alt="Téléphone" class="image-gauche" data-copy="0778782064">
+                        <div class="texte-droite" data-copy="0778782064">
+                            <p>07.78.78.20.64</p>
+                        </div>
+                        <div class="tooltip">Téléphone copié dans le presse-papier !</div>
                     </div>
-                    <div class="form-group">
-                        <label for="object">Objet :</label>
-                        <input type="text" id="object" name="object" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message :</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit">Envoyer</button>
-                </form>
-                <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+                </div>
                 <script>
-                (function() {
-                    emailjs.init("HhyvTnTr1yVWTYeoz"); // Considérez de sécuriser cette clé
-                })();
-            
-                document.getElementById('contact-form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    emailjs.sendForm('service_3o62fvn', 'template_av40yel', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                        alert('Message envoyé avec succès!');
-                        document.getElementById('contact-form').reset(); // Réinitialise le formulaire
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                        alert('Échec de l\'envoi du message. Veuillez réessayer.');
+                    document.addEventListener('DOMContentLoaded', function() {
+                        document.querySelectorAll('.contact-container').forEach(container => {
+                            container.addEventListener('click', function(e) {
+                                const target = e.target.closest('[data-copy]');
+                                if (!target) return;
+                    
+                                const textToCopy = target.getAttribute('data-copy');
+                                navigator.clipboard.writeText(textToCopy).then(() => {
+                                    const tooltip = this.querySelector('.tooltip');
+                                    tooltip.style.display = 'block';
+                                    setTimeout(() => {
+                                        tooltip.style.display = 'none';
+                                    }, 2000);
+                                }).catch(err => {
+                                    console.error('Erreur lors de la copie :', err);
+                                });
+                            });
+                        });
+                    
+                        console.log('Script de copie chargé'); // Pour vérifier si le script s'exécute
                     });
-                });
                 </script>
             </section>
         </main>
