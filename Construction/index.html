@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
     <title>CV BOUGY | Projet Alterance</title>
 </head>
+
 <body>
     <header>
         <div class="header-container">
             <div class="header-left">
-                <a class="name" href="https://baptistebougy.github.io"><h1>Baptiste BOUGY</h1></a>
+                <a class="name" href="https://baptistebougy.github.io">
+                    <h1>Baptiste BOUGY</h1>
+                </a>
                 <div class="language-selector">
                     <div class="selected-lang">
                         <img src="../Resources/Images/fr.png" alt="Français" id="selected-lang-img">
@@ -25,10 +29,14 @@
             </div>
             <nav class="navigation" aria-label="Menu principal">
                 <ul>
-                    <li><a class="redirection" href="#projets"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
-                    <li><a class="redirection" href="#competences"><span class="fr">Compétences</span><span class="en">Skills</span></a></li>
-                    <li><a class="redirection" href="#experiences"><span class="fr">Expériences et diplômes</span><span class="en">Experience and Education</span></a></li>
-                    <li><a class="redirection" href="#contact"><span class="fr">Contact</span><span class="en">Contact</span></a></li>
+                    <li><a class="redirection" href="#projets"><span class="fr">Projets</span><span
+                                class="en">Projects</span></a></li>
+                    <li><a class="redirection" href="#competences"><span class="fr">Compétences</span><span
+                                class="en">Skills</span></a></li>
+                    <li><a class="redirection" href="#experiences"><span class="fr">Expériences et diplômes</span><span
+                                class="en">Experience and Education</span></a></li>
+                    <li><a class="redirection" href="#contact"><span class="fr">Contact</span><span
+                                class="en">Contact</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -40,33 +48,59 @@
         </h1>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const langSelector = document.querySelector('.language-selector');
             const selectedLang = langSelector.querySelector('.selected-lang');
             const langDropdown = langSelector.querySelector('.lang-dropdown');
             const selectedLangImg = document.getElementById('selected-lang-img');
 
-            selectedLang.addEventListener('click', function() {
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+
+            function changeLanguage(lang) {
+                document.body.className = 'lang-' + lang;
+                selectedLangImg.src = langDropdown.querySelector(`[data-lang="${lang}"] img`).src;
+
+                const links = document.getElementsByTagName('a');
+                for (let i = 0; i < links.length; i++) {
+                    let href = links[i].href;
+                    if (href.indexOf('?') > -1) {
+                        href = href.replace(/([?&])lang=[^&]*(&|$)/, '$1lang=' + lang + '$2');
+                    } else {
+                        href += '?lang=' + lang;
+                    }
+                    links[i].href = href;
+                }
+            }
+
+            const lang = getUrlParameter('lang');
+            if (lang) {
+                changeLanguage(lang);
+            }
+
+            selectedLang.addEventListener('click', function () {
                 langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
             });
 
             langDropdown.querySelectorAll('li').forEach(item => {
-                item.addEventListener('click', function() {
-                const lang = this.getAttribute('data-lang');
-                selectedLangImg.src = this.querySelector('img').src;
-                langDropdown.style.display = 'none';
-                // Ici, ajoutez le code pour changer la langue du site
-                document.body.className = 'lang-' + lang;
+                item.addEventListener('click', function () {
+                    const lang = this.getAttribute('data-lang');
+                    changeLanguage(lang);
+                    langDropdown.style.display = 'none';
                 });
             });
 
-            // Fermer le dropdown si on clique en dehors
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (!langSelector.contains(e.target)) {
-                langDropdown.style.display = 'none';
+                    langDropdown.style.display = 'none';
                 }
             });
         });
     </script>
 </body>
+
 </html>
