@@ -10,19 +10,63 @@
 <body>
     <header>
         <div class="header-container">
-            <a class="name" href="https://baptistebougy.github.io">Baptiste BOUGY</a>
-            <nav class="navigation">
+            <div class="header-left">
+                <a class="name" href="https://baptistebougy.github.io"><h1>Baptiste BOUGY</h1></a>
+                <div class="language-selector">
+                    <div class="selected-lang">
+                        <img src="../Resources/Images/fr.png" alt="Français" id="selected-lang-img">
+                        <span class="arrow-down"></span>
+                    </div>
+                    <ul class="lang-dropdown">
+                        <li data-lang="fr"><img src="../Resources/Images/fr.png" alt="Français"> Français</li>
+                        <li data-lang="en"><img src="../Resources/Images/an.png" alt="English"> English</li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="navigation" aria-label="Menu principal">
                 <ul>
-                    <li><a class="redirection" href="https://baptistebougy.github.io#projets">Projets</a></li>
-                    <li><a class="redirection" href="https://baptistebougy.github.io#competences">Compétences</a></li>
-                    <li><a class="redirection" href="https://baptistebougy.github.io#experiences">Expériences et diplômes</a></li>
-                    <li><a class="redirection" href="https://baptistebougy.github.io#contact">Contact</a></li>
+                    <li><a class="redirection" href="#projets"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
+                    <li><a class="redirection" href="#competences"><span class="fr">Compétences</span><span class="en">Skills</span></a></li>
+                    <li><a class="redirection" href="#experiences"><span class="fr">Expériences et diplômes</span><span class="en">Experience and Education</span></a></li>
+                    <li><a class="redirection" href="#contact"><span class="fr">Contact</span><span class="en">Contact</span></a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="page-construction">
-        <h1 class="construction">Page en construction</h1>
+        <h1 class="construction">
+            <span class="fr">Page en construction</span>
+            <span class="en">Page under construction</span>
+        </h1>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const langSelector = document.querySelector('.language-selector');
+            const selectedLang = langSelector.querySelector('.selected-lang');
+            const langDropdown = langSelector.querySelector('.lang-dropdown');
+            const selectedLangImg = document.getElementById('selected-lang-img');
+
+            selectedLang.addEventListener('click', function() {
+                langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+
+            langDropdown.querySelectorAll('li').forEach(item => {
+                item.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                selectedLangImg.src = this.querySelector('img').src;
+                langDropdown.style.display = 'none';
+                // Ici, ajoutez le code pour changer la langue du site
+                document.body.className = 'lang-' + lang;
+                });
+            });
+
+            // Fermer le dropdown si on clique en dehors
+            document.addEventListener('click', function(e) {
+                if (!langSelector.contains(e.target)) {
+                langDropdown.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

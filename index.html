@@ -11,13 +11,25 @@
 <body>
     <header>
         <div class="header-container">
-            <a class="name" href="#head">Baptiste BOUGY</a>
-            <nav class="navigation">
+            <div class="header-left">
+                <a class="name" href="#head"><h1>Baptiste BOUGY</h1></a>
+                <div class="language-selector">
+                    <div class="selected-lang">
+                        <img src="Resources/Images/fr.png" alt="Français" id="selected-lang-img">
+                        <span class="arrow-down"></span>
+                    </div>
+                    <ul class="lang-dropdown">
+                        <li data-lang="fr"><img src="Resources/Images/fr.png" alt="Français"> Français</li>
+                        <li data-lang="en"><img src="Resources/Images/an.png" alt="English"> English</li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="navigation" aria-label="Menu principal">
                 <ul>
-                    <li><a class="redirection" href="#projets">Projets</a></li>
-                    <li><a class="redirection" href="#competences">Compétences</a></li>
-                    <li><a class="redirection" href="#experiences">Expériences et diplômes</a></li>
-                    <li><a class="redirection" href="#contact">Contact</a></li>
+                    <li><a class="redirection" href="#projets"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
+                    <li><a class="redirection" href="#competences"><span class="fr">Compétences</span><span class="en">Skills</span></a></li>
+                    <li><a class="redirection" href="#experiences"><span class="fr">Expériences et diplômes</span><span class="en">Experience and Education</span></a></li>
+                    <li><a class="redirection" href="#contact"><span class="fr">Contact</span><span class="en">Contact</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -33,47 +45,108 @@
                     <img src="Resources/Images/photo_p.jpg" alt="Photo de profil">
                 </div>
                 <p>
-                    <span class="titre">Bonjour 👋🏻,</span>
-                    </br></br> 
-                    Étant travailleur et motivé, je suis toujours prêt à embrasser de nouveaux défis qui élargissent mes perspectives.
-                    Je nourris un vif intérêt pour divers domaines, se manifestant à travers des expériences artistiques et sportives.
-                    Cette ouverture d'esprit me permet d'explorer de nouveaux horizons, contribuant ainsi à mon épanouissement personnel et professionnel.
+                    <span class="titre">
+                        <span class="fr">Bonjour 👋🏻,</span>
+                        <span class="en">Hello 👋🏻,</span>
+                    </span>
+                    <br><br>
+                    <span class="fr">
+                        Étant travailleur et motivé, je suis toujours prêt à embrasser de nouveaux défis qui élargissent mes perspectives.
+                        Je nourris un vif intérêt pour divers domaines, se manifestant à travers des expériences artistiques et sportives.
+                        Cette ouverture d'esprit me permet d'explorer de nouveaux horizons, contribuant ainsi à mon épanouissement personnel et professionnel.
+                    </span>
+                    <span class="en">
+                        Being hardworking and motivated, I am always ready to embrace new challenges that broaden my perspectives.
+                        I have a keen interest in various fields, manifesting through artistic and sporting experiences.
+                        This open-mindedness allows me to explore new horizons, thus contributing to my personal and professional growth.
+                    </span>
                 </p>
             </section>
             <section id="projets">
-                <h1>Projets</h1>
+                <h1>
+                    <span class="fr">Projets</span>
+                    <span class="en">Projects</span>
+                </h1>
                 <div class="projects-container">
                     <div class="project-card">
-                        <h2>Projet de reconnaissance faciale</h2>
-                        <a class="button" href="Construction/" target="_blank">En savoir plus</a>
+                        <h2>
+                            <span class="fr">Projet de reconnaissance faciale</span>
+                            <span class="en">Facial Recognition Project</span>
+                        </h2>
+                        <a class="button" href="Construction/" target="_blank">
+                            <span class="fr">En savoir plus</span>
+                            <span class="en">Learn more</span>
+                        </a>
                     </div>
                     <div class="project-card">
-                        <h2>Création du site internet <a class="redirection" href="https://hubvoyages.com" target="_blank">Hubvoyages.com</a></h2>
-                        <a class="button" href="Construction/" target="_blank">En savoir plus</a>
+                        <h2>
+                            <span class="fr">Création du site internet <a class="redirection" href="https://hubvoyages.com" target="_blank">Hubvoyages.com</a></span>
+                            <span class="en">Creation of the website <a class="redirection" href="https://hubvoyages.com" target="_blank">Hubvoyages.com</a></span>
+                        </h2>
+                        <a class="button" href="Construction/" target="_blank">
+                            <span class="fr">En savoir plus</span>
+                            <span class="en">Learn more</span>
+                        </a>
                     </div>
                     <div class="project-card">
-                        <h2>Travail de recherche en imagerie médicale</h2>
-                        <p>Article en cours de rédaction</p>
+                        <h2>
+                            <span class="fr">Travail de recherche en imagerie médicale</span>
+                            <span class="en">Research work in medical imaging</span>
+                        </h2>
+                        <p>
+                            <span class="fr">Article en cours de rédaction</span>
+                            <span class="en">Article currently being written</span>
+                        </p>
                     </div>
                     <div class="project-card">
-                        <h2>Création d'une Intelligence Artificielle détectant les maladies sur les feuilles de plantes</h2>
-                        <a class="button" href="Construction/" target="_blank">En savoir plus</a>
+                        <h2>
+                            <span class="fr">Création d'une Intelligence Artificielle détectant les maladies sur les feuilles de plantes</span>
+                            <span class="en">Creation of an Artificial Intelligence detecting diseases on plant leaves</span>
+                        </h2>
+                        <a class="button" href="Construction/" target="_blank">
+                            <span class="fr">En savoir plus</span>
+                            <span class="en">Learn more</span>
+                        </a>
                     </div>
                     <div class="project-card">
-                        <h2>Création d'une interface WEB avec une base de données</h2>
-                        <a class="button" href="Construction/" target="_blank">En savoir plus</a>
+                        <h2>
+                            <span class="fr">Création d'une interface WEB avec une base de données</span>
+                            <span class="en">Creation of a WEB interface with a database</span>
+                        </h2>
+                        <a class="button" href="Construction/" target="_blank">
+                            <span class="fr">En savoir plus</span>
+                            <span class="en">Learn more</span>
+                        </a>
                     </div>
                     <div class="project-card">
-                        <h2>Rédaction d'un article et animation d'une conférence sur l'intelligence artificielle Copilot</h2>
-                        <a class="button" href="Construction/" target="_blank">En savoir plus</a>
+                        <h2>
+                            <span class="fr">Rédaction d'un article et animation d'une conférence sur l'intelligence artificielle Copilot</span>
+                            <span class="en">Writing an article and hosting a conference on Copilot artificial intelligence</span>
+                        </h2>
+                        <a class="button" href="Construction/" target="_blank">
+                            <span class="fr">En savoir plus</span>
+                            <span class="en">Learn more</span>
+                        </a>
                     </div>
                     <div class="project-card">
-                        <h2>Rénovation du site internet du Centre ALCO</h2>
-                        <a class="button" href="Construction/" target="_blank">En savoir plus</a>
+                        <h2>
+                            <span class="fr">Rénovation du site internet du Centre ALCO</span>
+                            <span class="en">Renovation of the ALCO Center website</span>
+                        </h2>
+                        <a class="button" href="Construction/" target="_blank">
+                            <span class="fr">En savoir plus</span>
+                            <span class="en">Learn more</span>
+                        </a>
                     </div>
                     <div class="project-card">
-                        <h2>Participation à l'évènement Journalise d'un Jour (J1J) et rédaction d'un article</h2>
-                        <a class="button" href="Construction/" target="_blank">En savoir plus</a>
+                        <h2>
+                            <span class="fr">Participation à l'évènement Journaliste d'un Jour (J1J) et rédaction d'un article</span>
+                            <span class="en">Participation in the Journalist for a Day (J1J) event and writing an article</span>
+                        </h2>
+                        <a class="button" href="Construction/" target="_blank">
+                            <span class="fr">En savoir plus</span>
+                            <span class="en">Learn more</span>
+                        </a>
                     </div>
                 </div>
                 <script>
@@ -97,9 +170,15 @@
                 </script>
             </section>
             <section id="competences">
-                <h1>Compétences</h1>
+                <h1>
+                    <span class="fr">Compétences</span>
+                    <span class="en">Skills</span>
+                </h1>
                 <div class="competences-card">
-                    <h2>Langages de programmation</h2>
+                    <h2>
+                        <span class="fr">Langages de programmation</span>
+                        <span class="en">Programming languages</span>
+                    </h2>
                     <div class="competence-skill">
                         <figure>
                             <img src="Resources/Images/python-5-logo-svg-vector.svg" alt="">
@@ -138,7 +217,10 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <h2>Langages de programmation WEB</h2>
+                    <h2>
+                        <span class="fr">Langages de programmation WEB</span>
+                        <span class="en">WEB programming languages</span>
+                    </h2>
                     <div class="competence-skill">
                         <figure>
                             <img src="Resources/Images/HTML.png" alt="">
@@ -165,7 +247,10 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <h2>Autres langages utilisés</h2>
+                    <h2>
+                        <span class="fr">Autres langages utilisés</span>
+                        <span class="en">Other programming languages used</span>
+                    </h2>
                     <div class="competence-skill">
                         <figure>
                             <img src="Resources/Images/C++.png" alt="">
@@ -182,7 +267,8 @@
                         <figure>
                             <img src="Resources/Images/asm.png" alt="">
                             <figcaption>
-                                Assembleur
+                                <span class="fr">Assembleur</span>
+                                <span class="en">Assembly</span>
                             </figcaption>
                         </figure>
                         <figure>
@@ -210,18 +296,23 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <h2>Logiciels</h2>
+                    <h2>
+                        <span class="fr">Logiciels</span>
+                        <span class="en">Software</span>
+                    </h2>
                     <div class="competence-skill">
                         <figure>
-                            <img src="Resources/Images/office.png" alt="">
+                            <img src="Resources/Images/office.png" alt="Microsoft Office logo">
                             <figcaption>
-                                Suite Office
+                                <span class="fr">Suite Office</span>
+                                <span class="en">Office Suite</span>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="Resources/Images/jetbrains_logo.webp" alt="">
+                            <img src="Resources/Images/jetbrains_logo.webp" alt="JetBrains logo">
                             <figcaption>
-                                Suite JetBrains
+                                <span class="fr">Suite JetBrains</span>
+                                <span class="en">JetBrains Suite</span>
                             </figcaption>
                         </figure>
                         <figure>
@@ -261,30 +352,37 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <h2>Langues</h2>
+                    <h2>
+                        <span class="fr">Langues</span>
+                        <span class="en">Languages</span>
+                    </h2>
                     <div class="competence-skill">
                         <figure>
-                            <img src="Resources/Images/fr.png" alt="">
+                            <img src="Resources/Images/fr.png" alt="French Flag">
                             <figcaption>
-                                Langue maternelle
+                                <span class="fr">Langue maternelle</span>
+                                <span class="en">Native language</span>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="Resources/Images/an.png" alt="">
+                            <img src="Resources/Images/an.png" alt="English Flag">
                             <figcaption>
-                                Niveau professionnel
+                                <span class="fr">Niveau professionnel</span>
+                                <span class="en">Professional proficiency</span>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="Resources/Images/all.png" alt="">
+                            <img src="Resources/Images/all.png" alt="German Flag">
                             <figcaption>
-                                Niveau élémentaire
+                                <span class="fr">Niveau élémentaire</span>
+                                <span class="en">Elementary proficiency</span>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="Resources/Images/jp.png" alt="">
+                            <img src="Resources/Images/jp.png" alt="Japanese Flag">
                             <figcaption>
-                                Niveau élémentaire
+                                <span class="fr">Niveau élémentaire</span>
+                                <span class="en">Elementary proficiency</span>
                             </figcaption>
                         </figure>
                     </div>
@@ -310,108 +408,163 @@
                 </script>
             </section>
             <section id="experiences">
-                <h1><span class="exp">Expériences</span> et <span class="dip">diplômes</span></h1>
+                <h1>
+                    <span class="fr"><span class="exp">Expériences</span> et <span class="dip">diplômes</span></span>
+                    <span class="en"><span class="exp">Experience</span> and <span class="dip">Education</span></span>
+                </h1>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-date">
-                            <div class="date-header pro">Février 2024 - Juillet 2024</div>
+                            <div class="date-header pro">
+                                <span class="fr">Février 2024 - Juillet 2024</span>
+                                <span class="en">February 2024 - July 2024</span>
+                            </div>
                             <div class="date-body"><a class="redirection time" href="https://hubvoyages.com" target="_blank">Hubvoyages</a></div>
                         </div>
                         <div class="timeline-content">
-                            <div class="timeline-header pro">Création du site internet <a class="redirection" href="https://hubvoyages.com" target="_blank">Hubvoyages.com</a> en Freelance</div>
+                            <div class="timeline-header pro">
+                                <span class="fr">Création du site internet <a class="redirection" href="https://hubvoyages.com" target="_blank">Hubvoyages.com</a> en Freelance</span>
+                                <span class="en">Creation of the website <a class="redirection" href="https://hubvoyages.com" target="_blank">Hubvoyages.com</a> as a Freelancer</span>
+                            </div>
                             <div class="timeline-body">
-                                La jeune entreprise Hubvoyages m'a confiée la création de son site internet.
+                                <span class="fr">La jeune entreprise Hubvoyages m'a confiée la création de son site internet.</span>
+                                <span class="en">The young company Hubvoyages entrusted me with the creation of their website.</span>
                             </div>
                         </div>
                     </div>
+                
                     <div class="timeline-item">
                         <div class="timeline-date">
-                            <div class="date-header pro">Novembre 2022 - Août 2024</div>
+                            <div class="date-header pro">
+                                <span class="fr">Novembre 2022 - Août 2024</span>
+                                <span class="en">November 2022 - August 2024</span>
+                            </div>
                             <div class="date-body"><a class="redirection time" href="https://centre-alco.org" target="_blank">Centre Social et Interculturel ALCO</a></div>
                         </div>
                         <div class="timeline-content">
-                            <div class="timeline-header pro">Élaboration d’un projet de reconnaissance faciale en apprentissage</div>
+                            <div class="timeline-header pro">
+                                <span class="fr">Élaboration d'un projet de reconnaissance faciale en apprentissage</span>
+                                <span class="en">Development of a facial recognition project as an apprentice</span>
+                            </div>
                             <div class="timeline-body">
-                                En tant que chargé de projets et développeur en Intelligence Artificielle, ma mission a été de développer un outil
-                                capable d'automatiser l'émargement grâce à la reconnaissance faciale.
+                                <span class="fr">En tant que chargé de projets et développeur en Intelligence Artificielle, ma mission a été de développer un outil capable d'automatiser l'émargement grâce à la reconnaissance faciale.</span>
+                                <span class="en">As a project manager and Artificial Intelligence developer, my mission was to develop a tool capable of automating attendance tracking using facial recognition.</span>
                             </div>
                         </div>
                     </div>
+                
                     <div class="timeline-item">
                         <div class="timeline-date">
-                            <div class="date-header">Septembre 2022 - Août 2024</div>
+                            <div class="date-header">
+                                <span class="fr">Septembre 2022 - Août 2024</span>
+                                <span class="en">September 2022 - August 2024</span>
+                            </div>
                             <div class="date-body"><a class="redirection time" href="https://www.univ-reims.fr" target="_blank">Université de Reims Champagne-Ardenne</a></div>
                         </div>
                         <div class="timeline-content">
-                            <div class="timeline-header">Master Intelligence Artificielle et Imagerie</div>
+                            <div class="timeline-header">
+                                <span class="fr">Master Intelligence Artificielle et Imagerie</span>
+                                <span class="en">Master's Degree in Artificial Intelligence and Imaging</span>
+                            </div>
                             <div class="timeline-body">
-                                "Les compétences disciplinaires acquises se concentrent sur l’intelligence artificielle, les humanités numériques, 
-                                l’aide à la décision et la fouille de données, la collecte, l’analyse, la gestion et la fusion/corrélation de données, 
-                                le Big Data et l’apprentissage machine, appliqués par exemple aux villes/transport/agriculture connectés, 
-                                l’apprentissage profond, la classification, la complexité et les statistiques, appliqués par exemple à la modélisation bio-inspirée 
-                                et à la cognition située, la programmation, la visualisation et les interactions personnes-machines."
-                            </br> En savoir plus sur le site officiel du <a class="redirection" href="https://www.univ-reims.fr/formation/catalogue-de-formation/master-informatique,23515,38949.html?args=R9qFsCnMmKDtxCa17YTDkHVqaqbfYRXwwTnCVt2witCDUIiVoUdkeMDp%2AXGEGm2SMIhvMbuZ3_kOrRxvJlk6dOorIryuNioRCyFFyPAvhl9tCdwYdtHRrwAvNC1tDg_H&formation_id=198#trainingPresentation" target="_blank">master informatique</a>.
+                                <span class="fr">"Les compétences disciplinaires acquises se concentrent sur l'intelligence artificielle, les humanités numériques, l'aide à la décision et la fouille de données, la collecte, l'analyse, la gestion et la fusion/corrélation de données, le Big Data et l'apprentissage machine, appliqués par exemple aux villes/transport/agriculture connectés, l'apprentissage profond, la classification, la complexité et les statistiques, appliqués par exemple à la modélisation bio-inspirée et à la cognition située, la programmation, la visualisation et les interactions personnes-machines."</span>
+                                <span class="en">"The acquired disciplinary skills focus on artificial intelligence, digital humanities, decision support and data mining, data collection, analysis, management and fusion/correlation, Big Data and machine learning, applied for example to connected cities/transport/agriculture, deep learning, classification, complexity and statistics, applied for example to bio-inspired modeling and situated cognition, programming, visualization and human-machine interactions."</span>
+                                <br>
+                                <span class="fr">En savoir plus sur le site officiel du <a class="redirection" href="https://www.univ-reims.fr/formation/catalogue-de-formation/master-informatique,23515,38949.html?args=R9qFsCnMmKDtxCa17YTDkHVqaqbfYRXwwTnCVt2witCDUIiVoUdkeMDp%2AXGEGm2SMIhvMbuZ3_kOrRxvJlk6dOorIryuNioRCyFFyPAvhl9tCdwYdtHRrwAvNC1tDg_H&formation_id=198#trainingPresentation" target="_blank">master informatique</a>.</span>
+                                <span class="en">Learn more on the official website of the <a class="redirection" href="https://www.univ-reims.fr/formation/catalogue-de-formation/master-informatique,23515,38949.html?args=R9qFsCnMmKDtxCa17YTDkHVqaqbfYRXwwTnCVt2witCDUIiVoUdkeMDp%2AXGEGm2SMIhvMbuZ3_kOrRxvJlk6dOorIryuNioRCyFFyPAvhl9tCdwYdtHRrwAvNC1tDg_H&formation_id=198#trainingPresentation" target="_blank">Computer Science Master's program</a>.</span>
                             </div>
                         </div>
                     </div>
+                
                     <div class="timeline-item">
                         <div class="timeline-date">
-                            <div class="date-header pro">Avril 2022 - Juin 2022</div>
+                            <div class="date-header pro">
+                                <span class="fr">Avril 2022 - Juin 2022</span>
+                                <span class="en">April 2022 - June 2022</span>
+                            </div>
                             <div class="date-body"><a class="redirection time" href="https://centre-alco.org" target="_blank">Centre Social et Interculturel ALCO</a></div>
                         </div>
                         <div class="timeline-content">
-                            <div class="timeline-header pro">Création d’une interface WEB avec une BDD en stage</div>
+                            <div class="timeline-header pro">
+                                <span class="fr">Création d'une interface WEB avec une BDD en stage</span>
+                                <span class="en">Creation of a WEB interface with a database during internship</span>
+                            </div>
                             <div class="timeline-body">
-                                L'objectif de ce stage était de créer une base de données répertoriant et classant les documents et fichiers
-                                du Centre.
+                                <span class="fr">L'objectif de ce stage était de créer une base de données répertoriant et classant les documents et fichiers du Centre.</span>
+                                <span class="en">The objective of this internship was to create a database cataloging and classifying the Center's documents and files.</span>
                             </div>
                         </div>
                     </div>
+                
                     <div class="timeline-item">
                         <div class="timeline-date">
-                            <div class="date-header pro">Avril 2021 - Juillet 2021</div>
+                            <div class="date-header pro">
+                                <span class="fr">Avril 2021 - Juillet 2021</span>
+                                <span class="en">April 2021 - July 2021</span>
+                            </div>
                             <div class="date-body"><a class="redirection time" href="https://centre-alco.org" target="_blank">Centre Social et Interculturel ALCO</a></div>
                         </div>
                         <div class="timeline-content">
-                            <div class="timeline-header pro">Rénovation d’un site internet en stage et CDD</div>
+                            <div class="timeline-header pro">
+                                <span class="fr">Rénovation d'un site internet en stage et CDD</span>
+                                <span class="en">Website renovation during internship and fixed-term contract</span>
+                            </div>
                             <div class="timeline-body">
-                                L'objectif de ce stage était de remettre à neuf le site internet du Centre Social et Interculturel ALCO
-                                en respectant les contraintes données.
+                                <span class="fr">L'objectif de ce stage était de remettre à neuf le site internet du Centre Social et Interculturel ALCO en respectant les contraintes données.</span>
+                                <span class="en">The objective of this internship was to renovate the website of the ALCO Social and Intercultural Center while respecting the given constraints.</span>
                             </div>
                         </div>
                     </div>
+                
                     <div class="timeline-item">
                         <div class="timeline-date">
-                            <div class="date-header">Septembre 2019 - Août 2022</div>
+                            <div class="date-header">
+                                <span class="fr">Septembre 2019 - Août 2022</span>
+                                <span class="en">September 2019 - August 2022</span>
+                            </div>
                             <div class="date-body"><a class="redirection time" href="https://www.univ-reims.fr" target="_blank">Université de Reims Champagne-Ardenne</a></div>
                         </div>
                         <div class="timeline-content">
-                            <div class="timeline-header">Licence Informatique</div>
+                            <div class="timeline-header">
+                                <span class="fr">Licence Informatique</span>
+                                <span class="en">Bachelor's Degree in Computer Science</span>
+                            </div>
                             <div class="timeline-body">
-                                "Le principal objectif de la Licence Informatique est d'acquérir de solides connaissances, fondamentales et pratiques, 
-                                dans les différents domaines de l'Informatique."
-                                </br> En savoir plus sur le site officiel de la <a class="redirection" href="https://licenceinfo.fr" target="_blank">licence informatique</a>.
+                                <span class="fr">"Le principal objectif de la Licence Informatique est d'acquérir de solides connaissances, fondamentales et pratiques, dans les différents domaines de l'Informatique."</span>
+                                <span class="en">"The main objective of the Computer Science Bachelor's Degree is to acquire solid knowledge, both fundamental and practical, in the various fields of Computer Science."</span>
+                                <br>
+                                <span class="fr">En savoir plus sur le site officiel de la <a class="redirection" href="https://licenceinfo.fr" target="_blank">licence informatique</a>.</span>
+                                <span class="en">Learn more on the official website of the <a class="redirection" href="https://licenceinfo.fr" target="_blank">Computer Science Bachelor's program</a>.</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section id="contact">
-                <h1>Mon contact</h1>
+                <h1>
+                    <span class="fr">Mon contact</span>
+                    <span class="en">My Contact</span>
+                </h1>
                 <div class="contact-form">
                     <div class="contact-container">
                         <img src="Resources/Images/mail.png" alt="Email" class="image-gauche" data-copy="bougybaptiste@gmail.com">
                         <div class="texte-droite" data-copy="bougybaptiste@gmail.com">
                             <p>bougybaptiste@gmail.com</p>
                         </div>
-                        <div class="tooltip">Mail copié dans le presse-papier !</div>
+                        <div class="tooltip">
+                            <span class="fr">Mail copié dans le presse-papier !</span>
+                            <span class="en">Email copied to clipboard!</span>
+                        </div>
                     </div>
                     <div class="contact-container">
                         <img src="Resources/Images/phone.png" alt="Téléphone" class="image-gauche" data-copy="0778782064">
                         <div class="texte-droite" data-copy="0778782064">
                             <p>07.78.78.20.64</p>
                         </div>
-                        <div class="tooltip">Téléphone copié dans le presse-papier !</div>
+                        <div class="tooltip">
+                            <span class="fr">Téléphone copié dans le presse-papier !</span>
+                            <span class="en">Phone copied to clipboard!</span>
+                        </div>
                     </div>
                 </div>
                 <script>
@@ -440,5 +593,34 @@
             </section>
         </main>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const langSelector = document.querySelector('.language-selector');
+            const selectedLang = langSelector.querySelector('.selected-lang');
+            const langDropdown = langSelector.querySelector('.lang-dropdown');
+            const selectedLangImg = document.getElementById('selected-lang-img');
+
+            selectedLang.addEventListener('click', function() {
+                langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+
+            langDropdown.querySelectorAll('li').forEach(item => {
+                item.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                selectedLangImg.src = this.querySelector('img').src;
+                langDropdown.style.display = 'none';
+                // Ici, ajoutez le code pour changer la langue du site
+                document.body.className = 'lang-' + lang;
+                });
+            });
+
+            // Fermer le dropdown si on clique en dehors
+            document.addEventListener('click', function(e) {
+                if (!langSelector.contains(e.target)) {
+                langDropdown.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

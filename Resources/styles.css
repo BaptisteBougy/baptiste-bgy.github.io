@@ -74,7 +74,7 @@ header {
     left: 0;
     width: 100%;
     background-color: #f8f8f8;
-    padding: 10px 0;
+    padding: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
@@ -87,10 +87,16 @@ header {
     padding: 0 20px;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
 .name {
     text-decoration: none;
     font-weight: bold;
     color: #3498db;
+    margin-right: 20px;
 }
 
 .navigation ul {
@@ -478,6 +484,64 @@ button:hover {
   
 .tooltip.show {
     opacity: 1;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+}
+
+.language-selector {
+    margin-left: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+  
+.selected-lang {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+  
+.lang-dropdown {
+    width: fit-content;
+    padding-left: 0;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.lang-dropdown li {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+  
+.lang-dropdown li:hover {
+    background-color: #f1f1f1;
+}
+
+.selected-lang img, .lang-dropdown img {
+    width: 16px;
+}
+
+.en {
+    display: none;
+}
+
+.lang-en .fr {
+    display: none;
+}
+.lang-en .en {
+    display: inline;
 }
 
 @media (max-width: 480px) {
