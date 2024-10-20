@@ -58,7 +58,7 @@
                     <span class="en">
                         Being hardworking and motivated, I am always ready to embrace new challenges that broaden my perspectives.
                         I have a keen interest in various fields, manifesting through artistic and sporting experiences.
-                        This open-mindedness allows me to explore new horizons, thus contributing to my personal and professional growth.
+                        This open-mindedness allows me to explore new horizons, contributing to my personal and professional growth.
                     </span>
                 </p>
             </section>
@@ -81,7 +81,7 @@
                     <div class="project-card">
                         <h2>
                             <span class="fr">Création du site internet <a class="redirection" href="https://hubvoyages.com" target="_blank">Hubvoyages.com</a></span>
-                            <span class="en">Creation of the website <a class="redirection" href="https://hubvoyages.com" target="_blank">Hubvoyages.com</a></span>
+                            <span class="en">Website creation <a class="redirection" href="https://hubvoyages.com" target="_blank">Hubvoyages.com</a></span>
                         </h2>
                         <a class="button" href="Construction/" target="_blank">
                             <span class="fr">En savoir plus</span>
@@ -91,11 +91,11 @@
                     <div class="project-card">
                         <h2>
                             <span class="fr">Travail de recherche en imagerie médicale</span>
-                            <span class="en">Research work in medical imaging</span>
+                            <span class="en">Research project in medical imaging</span>
                         </h2>
                         <p>
                             <span class="fr">Article en cours de rédaction</span>
-                            <span class="en">Article currently being written</span>
+                            <span class="en">Article in progress</span>
                         </p>
                     </div>
                     <div class="project-card">
@@ -141,7 +141,7 @@
                     <div class="project-card">
                         <h2>
                             <span class="fr">Participation à l'évènement Journaliste d'un Jour (J1J) et rédaction d'un article</span>
-                            <span class="en">Participation in the Journalist for a Day (J1J) event and writing an article</span>
+                            <span class="en">Participation in the "Journaliste d'un Jour" (J1J) event and writing an article</span>
                         </h2>
                         <a class="button" href="Construction/" target="_blank">
                             <span class="fr">En savoir plus</span>
@@ -593,7 +593,7 @@
             </section>
         </main>
     </div>
-    <script>
+    <!--<script>
         document.addEventListener('DOMContentLoaded', function() {
             const langSelector = document.querySelector('.language-selector');
             const selectedLang = langSelector.querySelector('.selected-lang');
@@ -621,6 +621,65 @@
                 }
             });
         });
-    </script>
+    </script>-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const langSelector = document.querySelector('.language-selector');
+            const selectedLang = langSelector.querySelector('.selected-lang');
+            const langDropdown = langSelector.querySelector('.lang-dropdown');
+            const selectedLangImg = document.getElementById('selected-lang-img');
+        
+            // Fonction pour obtenir les paramètres d'URL
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+        
+            // Fonction pour changer la langue
+            function changeLanguage(lang) {
+                document.body.className = 'lang-' + lang;
+                selectedLangImg.src = langDropdown.querySelector(`[data-lang="${lang}"] img`).src;
+        
+                // Mettre à jour les liens pour inclure le paramètre de langue
+                const links = document.getElementsByTagName('a');
+                for (let i = 0; i < links.length; i++) {
+                    let href = links[i].href;
+                    if (href.indexOf('?') > -1) {
+                        href = href.replace(/([?&])lang=[^&]*(&|$)/, '$1lang=' + lang + '$2');
+                    } else {
+                        href += '?lang=' + lang;
+                    }
+                    links[i].href = href;
+                }
+            }
+        
+            // Appliquer la langue au chargement de la page
+            const lang = getUrlParameter('lang');
+            if (lang) {
+                changeLanguage(lang);
+            }
+        
+            selectedLang.addEventListener('click', function() {
+                langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+        
+            langDropdown.querySelectorAll('li').forEach(item => {
+                item.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    changeLanguage(lang);
+                    langDropdown.style.display = 'none';
+                });
+            });
+        
+            // Fermer le dropdown si on clique en dehors
+            document.addEventListener('click', function(e) {
+                if (!langSelector.contains(e.target)) {
+                    langDropdown.style.display = 'none';
+                }
+            });
+        });
+        </script>
 </body>
 </html>
