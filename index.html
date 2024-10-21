@@ -28,7 +28,7 @@
                     </ul>
                 </div>
             </div>
-            <nav class="navigation" aria-label="Menu principal">
+            <nav id="main-nav" class="navigation" aria-label="Menu principal">
                 <ul>
                     <li><a class="redirection" href="#projets"><span class="fr">Projets</span><span
                                 class="en">Projects</span></a></li>
@@ -40,6 +40,29 @@
                                 class="en">Contact</span></a></li>
                 </ul>
             </nav>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const nav = document.getElementById('main-nav');
+                    
+                    nav.addEventListener('click', function(e) {
+                        // Vérifier si le clic est sur un lien avec la classe 'redirection'
+                        if (e.target.classList.contains('redirection') || e.target.closest('.redirection')) {
+                            e.preventDefault(); // Empêcher le comportement par défaut du lien
+                            
+                            const link = e.target.closest('.redirection');
+                            const targetId = link.getAttribute('href').substring(1); // Enlever le '#' du href
+                            const targetElement = document.getElementById(targetId);
+                            
+                            if (targetElement) {
+                                // Faire défiler jusqu'à l'élément cible
+                                targetElement.scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }
+                    });
+                });
+            </script>
         </div>
     </header>
     <div class="container" id="head">
@@ -664,57 +687,81 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const langSelector = document.querySelector('.language-selector');
-            const selectedLang = langSelector.querySelector('.selected-lang');
-            const langDropdown = langSelector.querySelector('.lang-dropdown');
-            const selectedLangImg = document.getElementById('selected-lang-img');
+    const langSelector = document.querySelector('.language-selector');
+    const selectedLang = langSelector.querySelector('.selected-lang');
+    const langDropdown = langSelector.querySelector('.lang-dropdown');
+    const selectedLangImg = document.getElementById('selected-lang-img');
 
-            function getUrlParameter(name) {
-                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-                var results = regex.exec(location.search);
-                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    function changeLanguage(lang) {
+        document.body.className = 'lang-' + lang;
+        selectedLangImg.src = langDropdown.querySelector(`[data-lang="${lang}"] img`).src;
+
+        // Mise à jour de l'URL sans recharger la page
+        const url = new URL(window.location);
+        url.searchParams.set('lang', lang);
+        history.pushState({}, '', url);
+
+        // Mise à jour des liens (si nécessaire)
+        const links = document.getElementsByTagName('a');
+        for (let i = 0; i < links.length; i++) {
+            if (!links[i].classList.contains('redirection')) {
+                let href = new URL(links[i].href);
+                href.searchParams.set('lang', lang);
+                links[i].href = href.toString();
             }
+        }
 
-            function changeLanguage(lang) {
-                document.body.className = 'lang-' + lang;
-                selectedLangImg.src = langDropdown.querySelector(`[data-lang="${lang}"] img`).src;
+        // Réinitialiser les écouteurs d'événements pour la navigation interne
+        setupInternalNavigation();
+    }
 
-                const links = document.getElementsByTagName('a');
-                for (let i = 0; i < links.length; i++) {
-                    let href = links[i].href;
-                    if (href.indexOf('?') > -1) {
-                        href = href.replace(/([?&])lang=[^&]*(&|$)/, '$1lang=' + lang + '$2');
-                    } else {
-                        href += '?lang=' + lang;
-                    }
-                    links[i].href = href;
-                }
-            }
-
-            const lang = getUrlParameter('lang');
-            if (lang) {
-                changeLanguage(lang);
-            }
-
-            selectedLang.addEventListener('click', function () {
-                langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
-            });
-
-            langDropdown.querySelectorAll('li').forEach(item => {
-                item.addEventListener('click', function () {
-                    const lang = this.getAttribute('data-lang');
-                    changeLanguage(lang);
-                    langDropdown.style.display = 'none';
-                });
-            });
-
-            document.addEventListener('click', function (e) {
-                if (!langSelector.contains(e.target)) {
-                    langDropdown.style.display = 'none';
+    function setupInternalNavigation() {
+        const internalLinks = document.querySelectorAll('.redirection');
+        internalLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
+    }
+
+    const lang = getUrlParameter('lang');
+    if (lang) {
+        changeLanguage(lang);
+    }
+
+    selectedLang.addEventListener('click', function () {
+        langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    langDropdown.querySelectorAll('li').forEach(item => {
+        item.addEventListener('click', function () {
+            const lang = this.getAttribute('data-lang');
+            changeLanguage(lang);
+            langDropdown.style.display = 'none';
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!langSelector.contains(e.target)) {
+            langDropdown.style.display = 'none';
+        }
+    });
+
+    // Initialiser la navigation interne
+    setupInternalNavigation();
+});
     </script>
 </body>
 
