@@ -35,28 +35,29 @@
                     <li><a class="redirection" href="https://baptistebougy.github.io#contact"><span class="fr">Contact</span><span class="en">Contact</span></a></li>
                 </ul>
             </nav>
+            
             <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const nav = document.getElementById('main-nav');
                 
                 nav.addEventListener('click', function(e) {
-                    // Vérifier si le clic est sur un lien avec la classe 'redirection'
                     if (e.target.classList.contains('redirection') || e.target.closest('.redirection')) {
-                        e.preventDefault(); // Empêcher le comportement par défaut du lien
+                        e.preventDefault();
                         
                         const link = e.target.closest('.redirection');
                         const href = link.getAttribute('href');
-                        const targetId = href.split('#')[1]; // Extraire l'ID après le '#'
                         
-                        if (targetId) {
+                        if (window.location.origin + window.location.pathname === href.split('#')[0]) {
+                            const targetId = href.split('#')[1];
                             const targetElement = document.getElementById(targetId);
                             
                             if (targetElement) {
-                                // Faire défiler jusqu'à l'élément cible
                                 targetElement.scrollIntoView({
                                     behavior: 'smooth'
                                 });
                             }
+                        } else {
+                            window.location.href = href;
                         }
                     }
                 });
