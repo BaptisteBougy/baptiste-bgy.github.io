@@ -27,29 +27,28 @@
                     </ul>
                 </div>
             </div>
-            <nav class="navigation" aria-label="Menu principal">
+            <nav id="main-nav" class="navigation" aria-label="Menu principal">
                 <ul>
-                    <li><a class="redirection" href="https://baptistebougy.github.io#projets"><span class="fr">Projets</span><span
-                                class="en">Projects</span></a></li>
-                    <li><a class="redirection" href="https://baptistebougy.github.io#competences"><span class="fr">Compétences</span><span
-                                class="en">Skills</span></a></li>
-                    <li><a class="redirection" href="https://baptistebougy.github.io#experiences"><span class="fr">Expériences et diplômes</span><span
-                                class="en">Experience and Education</span></a></li>
-                    <li><a class="redirection" href="https://baptistebougy.github.io#contact"><span class="fr">Contact</span><span
-                                class="en">Contact</span></a></li>
+                    <li><a class="redirection" href="https://baptistebougy.github.io#projets"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
+                    <li><a class="redirection" href="https://baptistebougy.github.io#competences"><span class="fr">Compétences</span><span class="en">Skills</span></a></li>
+                    <li><a class="redirection" href="https://baptistebougy.github.io#experiences"><span class="fr">Expériences et diplômes</span><span class="en">Experience and Education</span></a></li>
+                    <li><a class="redirection" href="https://baptistebougy.github.io#contact"><span class="fr">Contact</span><span class="en">Contact</span></a></li>
                 </ul>
             </nav>
             <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const nav = document.getElementById('main-nav');
-                    
-                    nav.addEventListener('click', function(e) {
-                        // Vérifier si le clic est sur un lien avec la classe 'redirection'
-                        if (e.target.classList.contains('redirection') || e.target.closest('.redirection')) {
-                            e.preventDefault(); // Empêcher le comportement par défaut du lien
-                            
-                            const link = e.target.closest('.redirection');
-                            const targetId = link.getAttribute('href').substring(1); // Enlever le '#' du href
+            document.addEventListener('DOMContentLoaded', function() {
+                const nav = document.getElementById('main-nav');
+                
+                nav.addEventListener('click', function(e) {
+                    // Vérifier si le clic est sur un lien avec la classe 'redirection'
+                    if (e.target.classList.contains('redirection') || e.target.closest('.redirection')) {
+                        e.preventDefault(); // Empêcher le comportement par défaut du lien
+                        
+                        const link = e.target.closest('.redirection');
+                        const href = link.getAttribute('href');
+                        const targetId = href.split('#')[1]; // Extraire l'ID après le '#'
+                        
+                        if (targetId) {
                             const targetElement = document.getElementById(targetId);
                             
                             if (targetElement) {
@@ -59,8 +58,9 @@
                                 });
                             }
                         }
-                    });
+                    }
                 });
+            });
             </script>
         </div>
     </header>
