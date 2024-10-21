@@ -72,45 +72,58 @@
         </h1>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const nav = document.getElementById('main-nav');
-    
-    nav.addEventListener('click', function(e) {
-        if (e.target.classList.contains('redirection') || e.target.closest('.redirection')) {
-            e.preventDefault();
-            
-            const link = e.target.closest('.redirection');
-            const href = link.getAttribute('href');
-            const [baseUrl, hash] = href.split('#');
-            
-            // Obtenir la langue actuelle (à adapter selon votre logique de gestion des langues)
-            const currentLang = document.documentElement.lang || 'fr';
-            
-            // Construire l'URL de la page d'accueil avec le paramètre de langue
-            const homeUrl = `${baseUrl}?lang=${currentLang}`;
-            
-            // Si nous sommes déjà sur la page d'accueil
-            if (window.location.href.startsWith(baseUrl)) {
-                scrollToElement(hash);
-            } else {
-                // Rediriger vers la page d'accueil, puis scroller
-                window.location.href = homeUrl;
-                window.addEventListener('load', function() {
-                    scrollToElement(hash);
-                }, { once: true });
+        document.addEventListener('DOMContentLoaded', function () {
+            const langSelector = document.querySelector('.language-selector');
+            const selectedLang = langSelector.querySelector('.selected-lang');
+            const langDropdown = langSelector.querySelector('.lang-dropdown');
+            const selectedLangImg = document.getElementById('selected-lang-img');
+
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
             }
-        }
-    });
-    
-    function scrollToElement(id) {
-        const targetElement = document.getElementById(id);
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth'
+
+            function changeLanguage(lang) {
+                document.body.className = 'lang-' + lang;
+                selectedLangImg.src = langDropdown.querySelector(`[data-lang="${lang}"] img`).src;
+
+                const links = document.getElementsByTagName('a');
+                for (let i = 0; i < links.length; i++) {
+                    let href = links[i].href;
+                    if (href.indexOf('?') > -1) {
+                        href = href.replace(/([?&])lang=[^&]*(&|$)/, '$1lang=' + lang + '$2');
+                    } else {
+                        href += '?lang=' + lang;
+                    }
+                    links[i].href = href;
+                }
+            }
+
+            const lang = getUrlParameter('lang');
+            if (lang) {
+                changeLanguage(lang);
+            }
+
+            selectedLang.addEventListener('click', function () {
+                langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
             });
-        }
-    }
-});
+
+            langDropdown.querySelectorAll('li').forEach(item => {
+                item.addEventListener('click', function () {
+                    const lang = this.getAttribute('data-lang');
+                    changeLanguage(lang);
+                    langDropdown.style.display = 'none';
+                });
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!langSelector.contains(e.target)) {
+                    langDropdown.style.display = 'none';
+                }
+            });
+        });
     </script>
 </body>
 
