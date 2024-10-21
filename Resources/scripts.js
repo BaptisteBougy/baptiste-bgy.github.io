@@ -1,44 +1,39 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const nav = document.getElementById('main-nav');
-    
+    const figures = document.querySelectorAll('figure');
+    const langSelector = document.querySelector('.language-selector');
+    const selectedLang = langSelector.querySelector('.selected-lang');
+    const langDropdown = langSelector.querySelector('.lang-dropdown');
+    const selectedLangImg = document.getElementById('selected-lang-img');
+
+    // Navigation smooth scroll
     nav.addEventListener('click', function(e) {
         if (e.target.classList.contains('redirection') || e.target.closest('.redirection')) {
             e.preventDefault();
-            
             const link = e.target.closest('.redirection');
             const targetId = link.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-            
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                targetElement.scrollIntoView({ behavior: 'smooth' });
             }
         }
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-    const figures = document.querySelectorAll('figure');
-
+    // Figure animation
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
             }
         });
-    }, {
-        threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
-    figures.forEach(figure => {
-        observer.observe(figure);
-    });
-});
+    figures.forEach(figure => observer.observe(figure));
 
-document.addEventListener('DOMContentLoaded', function () {
+    // Contact info copy
     document.querySelectorAll('.contact-container').forEach(container => {
-        container.addEventListener('click', function (e) {
+        container.addEventListener('click', function(e) {
             const target = e.target.closest('[data-copy]');
             if (!target) return;
 
@@ -46,26 +41,16 @@ document.addEventListener('DOMContentLoaded', function () {
             navigator.clipboard.writeText(textToCopy).then(() => {
                 const tooltip = this.querySelector('.tooltip');
                 tooltip.style.display = 'block';
-                setTimeout(() => {
-                    tooltip.style.display = 'none';
-                }, 2000);
-            }).catch(err => {
-                console.error('Erreur lors de la copie :', err);
-            });
+                setTimeout(() => tooltip.style.display = 'none', 2000);
+            }).catch(err => console.error('Erreur lors de la copie :', err));
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-    const langSelector = document.querySelector('.language-selector');
-    const selectedLang = langSelector.querySelector('.selected-lang');
-    const langDropdown = langSelector.querySelector('.lang-dropdown');
-    const selectedLangImg = document.getElementById('selected-lang-img');
-
+    // Language selector
     function getUrlParameter(name) {
         name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-        var results = regex.exec(location.search);
+        const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        const results = regex.exec(location.search);
         return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     }
 
@@ -77,21 +62,17 @@ document.addEventListener('DOMContentLoaded', function () {
         url.searchParams.set('lang', lang);
         history.pushState({}, '', url);
 
-        const links = document.getElementsByTagName('a');
-        for (let i = 0; i < links.length; i++) {
-            if (!links[i].classList.contains('redirection')) {
-                let href = new URL(links[i].href);
-                href.searchParams.set('lang', lang);
-                links[i].href = href.toString();
-            }
-        }
+        document.querySelectorAll('a:not(.redirection)').forEach(link => {
+            let href = new URL(link.href);
+            href.searchParams.set('lang', lang);
+            link.href = href.toString();
+        });
 
         setupInternalNavigation();
     }
 
     function setupInternalNavigation() {
-        const internalLinks = document.querySelectorAll('.redirection');
-        internalLinks.forEach(link => {
+        document.querySelectorAll('.redirection').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
@@ -104,23 +85,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const lang = getUrlParameter('lang');
-    if (lang) {
-        changeLanguage(lang);
-    }
+    if (lang) changeLanguage(lang);
 
-    selectedLang.addEventListener('click', function () {
+    selectedLang.addEventListener('click', () => {
         langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
     });
 
     langDropdown.querySelectorAll('li').forEach(item => {
-        item.addEventListener('click', function () {
-            const lang = this.getAttribute('data-lang');
-            changeLanguage(lang);
+        item.addEventListener('click', function() {
+            changeLanguage(this.getAttribute('data-lang'));
             langDropdown.style.display = 'none';
         });
     });
 
-    document.addEventListener('click', function (e) {
+    document.addEventListener('click', function(e) {
         if (!langSelector.contains(e.target)) {
             langDropdown.style.display = 'none';
         }
