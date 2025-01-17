@@ -41,17 +41,17 @@
                 </ul>
             </nav>
             <script>
-                document.addEventListener('DOMContentLoaded', function() {
+                document.addEventListener('DOMContentLoaded', function () {
                     const nav = document.getElementById('main-nav');
-                    
-                    nav.addEventListener('click', function(e) {
+
+                    nav.addEventListener('click', function (e) {
                         if (e.target.classList.contains('redirection') || e.target.closest('.redirection')) {
                             e.preventDefault();
-                            
+
                             const link = e.target.closest('.redirection');
                             const targetId = link.getAttribute('href').substring(1);
                             const targetElement = document.getElementById(targetId);
-                            
+
                             if (targetElement) {
                                 targetElement.scrollIntoView({
                                     behavior: 'smooth'
@@ -86,13 +86,16 @@
                         mes perspectives.
                         Je nourris un vif intérêt pour divers domaines, se manifestant à travers des expériences
                         artistiques et sportives.
-                        Cette ouverture d'esprit me permet d'explorer de nouveaux horizons et d'apprécier le travail en équipe, contribuant ainsi à mon
+                        Cette ouverture d'esprit me permet d'explorer de nouveaux horizons et d'apprécier le travail en
+                        équipe, contribuant ainsi à mon
                         épanouissement personnel et professionnel.
                     </span>
                     <span class="en">
-                        Being hardworking and motivated, I am always ready to embrace new challenges that broaden my perspectives.
+                        Being hardworking and motivated, I am always ready to embrace new challenges that broaden my
+                        perspectives.
                         I have a keen interest in various fields, manifesting through artistic and sporting experiences.
-                        This open-mindedness allows me to explore new horizons and appreciate teamwork, which contributes to my personal and professional growth.
+                        This open-mindedness allows me to explore new horizons and appreciate teamwork, which
+                        contributes to my personal and professional growth.
                     </span>
                 </p>
             </section>
@@ -107,10 +110,65 @@
                             <span class="fr">Projet de reconnaissance faciale</span>
                             <span class="en">Facial Recognition Project</span>
                         </h2>
-                        <a class="button" href="Construction/" target="_blank">
+                        <a class="button" href="" id="open_reco_dialog">
                             <span class="fr">En savoir plus</span>
                             <span class="en">Learn more</span>
                         </a>
+                        <dialog id="info_reco">
+                            <h2>
+                                <span class="fr">Projet de reconnaissance faciale</span>
+                                <span class="en">Facial Recognition Project</span>
+                            </h2>
+                            <p>
+                                <span class="fr">
+                                    - Étude de faisabilité du projet, rédaction du cahier des charges et échanges avec
+                                    l’équipe pour la mise en place du projet ;<br>
+                                    - Modélisation des différentes structures composantes du projet ;<br>
+                                    - Choix des différentes technologies utilisées (supports de travail, langages de
+                                    programmation, serveurs, etc) ;<br>
+                                    - Programmation de l'outil de reconnaissance faciale permettant l'émargement
+                                    automatique avec possibilité de scalabilité grâce à la programmation sur carte
+                                    graphique ;<br>
+                                    - Programmation de l'interface web pour réalisation manuelle de l'émargement,
+                                    ajouter et supprimer des usagers, activités ou inscriptions, permettant la collecte
+                                    et l'utilisation d'informations ;<br>
+                                    - Mise en relation des technologies créées avec l'ancien logiciel utilisé via des
+                                    serveurs en temps réel ;<br>
+                                    - Programmation d'un outil d'envoi automatique des justificatifs de présences aux
+                                    financeurs ;<br>
+                                    - Phases de tests, présentation du projet à l'équipe et mise en production du projet
+                                    fini ;<br>
+                                    - Maintenances et mises à jours continue du projet.<br>
+                                    Technologies utilisées : Python, HTML, CSS, JS, PHP, SQL, PHPMyAdmin, CUDA, CUdnn,
+                                    Serveur NAS, Windows, Raspbian.
+                                </span>
+                                <span class="en">
+                                    - Project feasibility study, drafting of specifications, and discussions with the
+                                    team for project implementation;<br> - Modeling of the various component structures
+                                    of
+                                    the project;<br> - Selection of different technologies used (work platforms,
+                                    programming
+                                    languages, servers, etc.);<br> - Programming of the facial recognition tool allowing
+                                    automatic attendance tracking with scalability potential through GPU
+                                    programming;<br> -
+                                    Programming of the web interface for manual attendance tracking, adding and removing
+                                    users, activities or registrations, enabling information collection and
+                                    utilization;<br>
+                                    - Integration of created technologies with the previously used software via
+                                    real-time servers;<br> - Programming of an automated tool for sending attendance
+                                    records
+                                    to funders;<br> - Testing phases, project presentation to the team, and deployment
+                                    of
+                                    the finished project;<br> - Continuous maintenance and updates of the project.<br>
+                                    Technologies used: Python, HTML, CSS, JS, PHP, SQL, PHPMyAdmin, CUDA, CUDnn, NAS
+                                    Server, Windows, Raspbian.
+                                </span>
+                            </p>
+                            <button class="closeDialog">
+                                <span class="fr">Fermer</span>
+                                <span class="en">Close</span>
+                            </button>
+                        </dialog>
                     </div>
                     <div class="project-card">
                         <h2>
@@ -119,10 +177,33 @@
                             <span class="en">Website creation <a class="redirection" href="https://hubvoyages.com"
                                     target="_blank">Hubvoyages.com</a></span>
                         </h2>
-                        <a class="button" href="Construction/" target="_blank">
+                        <a class="button" href="" id="open_hub_dialog">
                             <span class="fr">En savoir plus</span>
                             <span class="en">Learn more</span>
                         </a>
+                        <dialog id="info_hub">
+                            <h2>
+                                <span class="fr">Projet de reconnaissance faciale</span>
+                                <span class="en">Facial Recognition Project</span>
+                            </h2>
+                            <p>
+                                <span class="fr">
+                                    - Cahier des charges discuté avec le client puis réalisation d'un devis ;<br>
+                                    - Création de visuels pour le site ;<br>
+                                    - Conseils sur la réservation du nom de domaine et de l'hébergement ;<br>
+                                    - Installation du module WordPress et conseils ;<br>
+                                    - Programmation du site internet avec un minimum d'extension ;<br>
+                                    - Maintenance et mises à jour régulières du site.<br>
+                                    Technologies utilisées : HTML, CSS, JS, PHP, WordPress.
+                                </span>
+                                <span class="en">
+                                </span>
+                            </p>
+                            <button class="closeDialog">
+                                <span class="fr">Fermer</span>
+                                <span class="en">Close</span>
+                            </button>
+                        </dialog>
                     </div>
                     <div class="project-card">
                         <h2>
@@ -141,20 +222,69 @@
                             <span class="en">Creation of an Artificial Intelligence detecting diseases on plant
                                 leaves</span>
                         </h2>
-                        <a class="button" href="Construction/" target="_blank">
+                        <!--<a class="button" href="Construction/" target="_blank">
                             <span class="fr">En savoir plus</span>
                             <span class="en">Learn more</span>
                         </a>
+                        <dialog id="info_hub">
+                            <h2>
+                                <span class="fr">Projet de reconnaissance faciale</span>
+                                <span class="en">Facial Recognition Project</span>
+                            </h2>
+                            <p>
+                                <span class="fr">
+                                    - Cahier des charges discuté avec le client puis réalisation d'un devis ;<br>
+                                    - Création de visuels pour le site ;<br>
+                                    - Conseils sur la réservation du nom de domaine et de l'hébergement ;<br>
+                                    - Installation du module WordPress et conseils ;<br>
+                                    - Programmation du site internet avec un minimum d'extension ;<br>
+                                    - Maintenance et mises à jour régulières du site.<br>
+                                    Technologies utilisées : HTML, CSS, JS, PHP, WordPress.
+                                </span>
+                                <span class="en">
+                                </span>
+                            </p>
+                            <button class="closeDialog">
+                                <span class="fr">Fermer</span>
+                                <span class="en">Close</span>
+                            </button>
+                        </dialog>-->
                     </div>
                     <div class="project-card">
                         <h2>
                             <span class="fr">Création d'une interface WEB avec une base de données</span>
                             <span class="en">Creation of a WEB interface with a database</span>
                         </h2>
-                        <a class="button" href="Construction/" target="_blank">
+                        <a class="button" href="" id="open_iw_dialog">
                             <span class="fr">En savoir plus</span>
                             <span class="en">Learn more</span>
                         </a>
+                        <dialog id="info_iw">
+                            <h2>
+                                <span class="fr">Projet de reconnaissance faciale</span>
+                                <span class="en">Facial Recognition Project</span>
+                            </h2>
+                            <p>
+                                <span class="fr">
+                                    - Étude de faisabilité du projet, rédaction du cahier des charges et échanges avec
+                                    l’équipe pour la mise en place du projet ;<br>
+                                    - Modélisation des différentes structures composantes du projet ;<br>
+                                    - Choix des différentes technologies utilisées (supports de travail, langages de
+                                    programmation, etc) ;<br>
+                                    - Programmation de l'interface web pour la gestion centralisée des fichiers du
+                                    Centre ;<br>
+                                    - Phases de tests, présentation du projet à l'équipe et mise en production du projet
+                                    fini.<br>
+                                    Technologies utilisées : HTML, CSS, JS, PHP, SQL, PHPMyAdmin.
+                                </span>
+                                <span class="en">
+                                </span>
+                            </p>
+                            <button class="closeDialog">
+                                <span class="fr">Fermer</span>
+                                <span class="en">Close</span>
+                            </button>
+                        </dialog>
                     </div>
                     <div class="project-card">
                         <h2>
@@ -163,20 +293,64 @@
                             <span class="en">Writing an article and hosting a conference on Copilot artificial
                                 intelligence</span>
                         </h2>
-                        <a class="button" href="Construction/" target="_blank">
+                        <!--<a class="button" href="" id="open_c_dialog">
                             <span class="fr">En savoir plus</span>
                             <span class="en">Learn more</span>
                         </a>
+                        <dialog id="info_hub">
+                            <h2>
+                                <span class="fr">Projet de reconnaissance faciale</span>
+                                <span class="en">Facial Recognition Project</span>
+                            </h2>
+                            <p>
+                                <span class="fr">
+                                    - Cahier des charges discuté avec le client puis réalisation d'un devis ;<br>
+                                    - Création de visuels pour le site ;<br>
+                                    - Conseils sur la réservation du nom de domaine et de l'hébergement ;<br>
+                                    - Installation du module WordPress et conseils ;<br>
+                                    - Programmation du site internet avec un minimum d'extension ;<br>
+                                    - Maintenance et mises à jour régulières du site.<br>
+                                    Technologies utilisées : HTML, CSS, JS, PHP, WordPress.
+                                </span>
+                                <span class="en">
+                                </span>
+                            </p>
+                            <button class="closeDialog">
+                                <span class="fr">Fermer</span>
+                                <span class="en">Close</span>
+                            </button>
+                        </dialog>-->
                     </div>
                     <div class="project-card">
                         <h2>
                             <span class="fr">Rénovation du site internet du Centre ALCO</span>
                             <span class="en">Renovation of the ALCO Center website</span>
                         </h2>
-                        <a class="button" href="Construction/" target="_blank">
+                        <a class="button" href="" id="open_rs_dialog">
                             <span class="fr">En savoir plus</span>
                             <span class="en">Learn more</span>
                         </a>
+                        <dialog id="info_rs">
+                            <h2>
+                                <span class="fr">Projet de reconnaissance faciale</span>
+                                <span class="en">Facial Recognition Project</span>
+                            </h2>
+                            <p>
+                                <span class="fr">
+                                    - Étude du projet et rédaction du cahier des charges ;<br>
+                                    - Modélisation de la nouvelle structure du site ;<br>
+                                    - Rénovation du site internet du Centre ;<br>
+                                    - Présentation d'essais puis de la rénovation finie.<br>
+                                    Technologies utilisées : HTML, CSS, JimDo.
+                                </span>
+                                <span class="en">
+                                </span>
+                            </p>
+                            <button class="closeDialog">
+                                <span class="fr">Fermer</span>
+                                <span class="en">Close</span>
+                            </button>
+                        </dialog>
                     </div>
                     <div class="project-card">
                         <h2>
@@ -185,31 +359,32 @@
                             <span class="en">Participation in the "Journaliste d'un Jour" (J1J) event and writing an
                                 article</span>
                         </h2>
-                        <a class="button" href="Construction/" target="_blank">
+                        <a class="button" href="" id="open_juj_dialog">
                             <span class="fr">En savoir plus</span>
                             <span class="en">Learn more</span>
                         </a>
+                        <dialog id="info_juj">
+                            <h2>
+                                <span class="fr">Projet de reconnaissance faciale</span>
+                                <span class="en">Facial Recognition Project</span>
+                            </h2>
+                            <p>
+                                <span class="fr">
+                                    Participation à l'évènement "Journaliste d'un jour" (ou J1J). L'objectif était de se
+                                    mettre dans la peau d'un journaliste pendant une journée, puis, d'écrire des
+                                    articles qui sont passés dans les journaux. Mon équipe à eu un article nominé et
+                                    j'ai personnellement participé à cet article et à la création de l'image.
+                                </span>
+                                <span class="en">
+                                </span>
+                            </p>
+                            <button class="closeDialog">
+                                <span class="fr">Fermer</span>
+                                <span class="en">Close</span>
+                            </button>
+                        </dialog>
                     </div>
                 </div>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const cards = document.querySelectorAll('.project-card');
-
-                        const observer = new IntersectionObserver((entries) => {
-                            entries.forEach(entry => {
-                                if (entry.isIntersecting) {
-                                    entry.target.classList.add('show');
-                                }
-                            });
-                        }, {
-                            threshold: 0.1 // Déclenche quand 10% de l'élément est visible
-                        });
-
-                        cards.forEach(card => {
-                            observer.observe(card);
-                        });
-                    });    
-                </script>
             </section>
             <section id="competences">
                 <h1>
@@ -429,25 +604,6 @@
                         </figure>
                     </div>
                 </div>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const figures = document.querySelectorAll('figure');
-
-                        const observer = new IntersectionObserver((entries) => {
-                            entries.forEach(entry => {
-                                if (entry.isIntersecting) {
-                                    entry.target.classList.add('show');
-                                }
-                            });
-                        }, {
-                            threshold: 0.1 // Déclenche quand 10% de l'élément est visible
-                        });
-
-                        figures.forEach(figure => {
-                            observer.observe(figure);
-                        });
-                    });
-                </script>
             </section>
             <section id="experiences">
                 <h1>
@@ -655,110 +811,10 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        document.querySelectorAll('.contact-container').forEach(container => {
-                            container.addEventListener('click', function (e) {
-                                const target = e.target.closest('[data-copy]');
-                                if (!target) return;
-
-                                const textToCopy = target.getAttribute('data-copy');
-                                navigator.clipboard.writeText(textToCopy).then(() => {
-                                    const tooltip = this.querySelector('.tooltip');
-                                    tooltip.style.display = 'block';
-                                    setTimeout(() => {
-                                        tooltip.style.display = 'none';
-                                    }, 2000);
-                                }).catch(err => {
-                                    console.error('Erreur lors de la copie :', err);
-                                });
-                            });
-                        });
-
-                        console.log('Script de copie chargé'); // Pour vérifier si le script s'exécute
-                    });
-                </script>
             </section>
         </main>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    const langSelector = document.querySelector('.language-selector');
-    const selectedLang = langSelector.querySelector('.selected-lang');
-    const langDropdown = langSelector.querySelector('.lang-dropdown');
-    const selectedLangImg = document.getElementById('selected-lang-img');
-
-    function getUrlParameter(name) {
-        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-        var results = regex.exec(location.search);
-        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-    }
-
-    function changeLanguage(lang) {
-        document.body.className = 'lang-' + lang;
-        selectedLangImg.src = langDropdown.querySelector(`[data-lang="${lang}"] img`).src;
-
-        // Mise à jour de l'URL sans recharger la page
-        const url = new URL(window.location);
-        url.searchParams.set('lang', lang);
-        history.pushState({}, '', url);
-
-        // Mise à jour des liens (si nécessaire)
-        const links = document.getElementsByTagName('a');
-        for (let i = 0; i < links.length; i++) {
-            if (!links[i].classList.contains('redirection')) {
-                let href = new URL(links[i].href);
-                href.searchParams.set('lang', lang);
-                links[i].href = href.toString();
-            }
-        }
-
-        // Réinitialiser les écouteurs d'événements pour la navigation interne
-        setupInternalNavigation();
-    }
-
-    function setupInternalNavigation() {
-        const internalLinks = document.querySelectorAll('.redirection');
-        internalLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    }
-
-    const lang = getUrlParameter('lang');
-    if (lang) {
-        changeLanguage(lang);
-    }
-
-    selectedLang.addEventListener('click', function () {
-        langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
-    });
-
-    langDropdown.querySelectorAll('li').forEach(item => {
-        item.addEventListener('click', function () {
-            const lang = this.getAttribute('data-lang');
-            changeLanguage(lang);
-            langDropdown.style.display = 'none';
-        });
-    });
-
-    document.addEventListener('click', function (e) {
-        if (!langSelector.contains(e.target)) {
-            langDropdown.style.display = 'none';
-        }
-    });
-
-    // Initialiser la navigation interne
-    setupInternalNavigation();
-});
-    </script>
+    <script src="Resources/scripts.js"></script>
 </body>
 
 </html>
