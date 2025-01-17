@@ -40,27 +40,6 @@
                                 class="en">Contact</span></a></li>
                 </ul>
             </nav>
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    const nav = document.getElementById('main-nav');
-
-                    nav.addEventListener('click', function (e) {
-                        if (e.target.classList.contains('redirection') || e.target.closest('.redirection')) {
-                            e.preventDefault();
-
-                            const link = e.target.closest('.redirection');
-                            const targetId = link.getAttribute('href').substring(1);
-                            const targetElement = document.getElementById(targetId);
-
-                            if (targetElement) {
-                                targetElement.scrollIntoView({
-                                    behavior: 'smooth'
-                                });
-                            }
-                        }
-                    });
-                });
-            </script>
         </div>
     </header>
     <div class="container" id="head">
